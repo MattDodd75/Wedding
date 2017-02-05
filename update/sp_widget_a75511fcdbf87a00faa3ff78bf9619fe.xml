@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.wedding-background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  background: url('/wedding_background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*
+.page-background:before {
+  content: '';
+  background: url(wedding_background.jpg) repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}*/</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>wedding_background</id>
+        <internal>false</internal>
+        <link/>
+        <name>Wedding Background</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-05 02:58:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a75511fcdbf87a00faa3ff78bf9619fe</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Wedding Background</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_widget_a75511fcdbf87a00faa3ff78bf9619fe</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-05 03:19:20</sys_updated_on>
+        <template><![CDATA[<div>
+	<div class="wedding-background">&nbsp;</div>
+</div>]]></template>
+    </sp_widget>
+</record_update>
