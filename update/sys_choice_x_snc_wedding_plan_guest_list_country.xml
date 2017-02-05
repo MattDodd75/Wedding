@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="country" table="x_snc_wedding_plan_guest_list" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>America</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>0</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>688470a6db04fe00faa3ff78bf961902</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:28</sys_updated_on>
+            <value>America</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Australia</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>1</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>608434a6db04fe00faa3ff78bf961983</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:28</sys_updated_on>
+            <value>Australia</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Canada</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>2</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:17:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bc9434a6db04fe00faa3ff78bf961991</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:28</sys_updated_on>
+            <value>Canada</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New Zealand</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>3</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c8434a6db04fe00faa3ff78bf961983</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:29</sys_updated_on>
+            <value>New Zealand</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Singapore</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>4</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e48434a6db04fe00faa3ff78bf961984</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:29</sys_updated_on>
+            <value>Singapore</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Thailand</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>5</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a08434a6db04fe00faa3ff78bf961985</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:29</sys_updated_on>
+            <value>Thailand</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UK</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sequence>6</sequence>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c8434a6db04fe00faa3ff78bf961985</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:27</sys_updated_on>
+            <value>UK</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>country</element>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-04 04:16:54</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>248470a6db04fe00faa3ff78bf961903</sys_id>
+            <sys_mod_count>10</sys_mod_count>
+            <sys_name>country</sys_name>
+            <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+            <sys_update_name>sys_choice_x_snc_wedding_plan_guest_list_country</sys_update_name>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-04 06:00:30</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {
+  // widget controller
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.wedding-footer {&#13;
+  background-color: white; &#13;
+  color: black; &#13;
+  padding: 5px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Wedding Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.time = new GlideDateTime().getDisplayValue();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-05 01:13:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fa5d7c78dbb87a00faa3ff78bf96190d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Wedding Footer</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_header_footer_fa5d7c78dbb87a00faa3ff78bf96190d</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-05 01:25:39</sys_updated_on>
+        <template><![CDATA[ <div class="wedding-footer pull-right">	
+  ${Page generated at {{::c.data.time}}}
+ </div>]]></template>
+    </sp_header_footer>
+</record_update>

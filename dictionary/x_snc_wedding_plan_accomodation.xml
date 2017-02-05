@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Accomodation" max_length="40" name="x_snc_wedding_plan_accomodation" type="collection">
+        <element label="Address" max_length="150" name="address" type="string"/>
+        <element label="Average Price" max_length="20" name="average_price" type="currency"/>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element display="true" label="Name" max_length="60" name="name" type="string"/>
+        <element label="Number of Rooms" max_length="40" name="number_of_rooms" type="integer"/>
+        <element label="Website" max_length="1024" name="website" type="url"/>
+    </element>
+</database>

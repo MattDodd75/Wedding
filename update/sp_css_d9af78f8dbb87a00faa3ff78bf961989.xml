@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_css">
+    <sp_css action="INSERT_OR_UPDATE">
+        <css>background-color: #000;</css>
+        <name>Wedding Styles</name>
+        <sys_class_name>sp_css</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-05 01:23:40</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d9af78f8dbb87a00faa3ff78bf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Wedding Styles</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_css_d9af78f8dbb87a00faa3ff78bf961989</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-05 01:23:40</sys_updated_on>
+    </sp_css>
+</record_update>

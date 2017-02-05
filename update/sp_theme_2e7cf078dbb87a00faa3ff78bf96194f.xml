@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$sp-logo-margin-x: 					15px !default;&#13;
+$sp-tagline-color:					$text-color !default;&#13;
+$navbar-inverse-bg: 				#3a3f51 !default;&#13;
+$navbar-inverse-link-color: 		#bdc0c4 !default;&#13;
+$navbar-inverse-link-hover-color: 	#ffffff !default;&#13;
+$body-bg: 							#f0f3f4 !default;&#13;
+$dropdown-link-disabled-color: 		#ccc;&#13;
+$font-family:						"Lato";&#13;
+</css_variables>
+        <footer display_value="Wedding Footer">fa5d7c78dbb87a00faa3ff78bf96190d</footer>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="Wedding Header ">0e9c3478dbb87a00faa3ff78bf961923</header>
+        <name>Wedding Theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-05 01:09:28</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2e7cf078dbb87a00faa3ff78bf96194f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Wedding Theme</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_theme_2e7cf078dbb87a00faa3ff78bf96194f</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-05 01:22:28</sys_updated_on>
+    </sp_theme>
+</record_update>

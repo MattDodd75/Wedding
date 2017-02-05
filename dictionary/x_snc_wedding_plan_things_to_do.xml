@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Things to do" max_length="40" name="x_snc_wedding_plan_things_to_do" sizeclass="3" type="collection">
+        <element label="Area" max_length="50" name="area" type="string"/>
+        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element label="Bar/Club" sequence="0" value="Bar/Club"/>
+                <element label="Dining" sequence="1" value="Dining"/>
+                <element label="Entertainment" sequence="2" value="Entertainment"/>
+                <element label="Outdoors" sequence="3" value="Outdoors"/>
+                <element label="Shopping" sequence="4" value="Shopping"/>
+            </choice>
+        </element>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element display="true" label="Name" max_length="100" name="name" type="string"/>
+        <element label="Website" max_length="1024" name="website" type="url"/>
+    </element>
+</database>

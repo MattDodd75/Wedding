@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="average_price" label="Average Price" language="en" table="x_snc_wedding_plan_accomodation">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>average_price</element>
+            <help/>
+            <hint/>
+            <label>Average Price</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_accomodation</name>
+            <plural>Average Prices</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-01-31 16:48:51</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>e283a213db647600faa3ff78bf9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Average Price</sys_name>
+            <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_wedding_plan_accomodation_average_price_en</sys_update_name>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-01-31 16:48:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
