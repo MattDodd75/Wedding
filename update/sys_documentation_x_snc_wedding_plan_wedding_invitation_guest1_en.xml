@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="guest1" label="Guest 1" language="en" table="x_snc_wedding_plan_wedding_invitation">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>guest1</element>
+            <help/>
+            <hint/>
+            <label>Guest 1</label>
+            <language>en</language>
+            <name>x_snc_wedding_plan_wedding_invitation</name>
+            <plural>Guest 1s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-02-12 16:35:43</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_id>87939c17db747240faa3ff78bf961940</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Guest 1</sys_name>
+            <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_wedding_plan_wedding_invitation_guest1_en</sys_update_name>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-02-12 16:35:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition><![CDATA[current.sent = true;
+current.sent_date = new GlideDateTime().getDisplayValue();
+current.update();
+
+answer = true;]]></advanced_condition>
+        <affected_field_on_event/>
+        <collection>x_snc_wedding_plan_wedding_invitation</collection>
+        <condition table="x_snc_wedding_plan_wedding_invitation">sent=false^guest2ISNOTEMPTY^EQ<item endquery="false" field="sent" goto="false" newquery="false" operator="=" or="false" value="false"/>
+            <item endquery="false" field="guest2" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <description/>
+        <event_name>approval.cancelled</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-family: 'trebuchet ms', geneva; font-size: 10pt;">Dear ${guest1.first_name} and ${guest2.first_name},</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: 10pt;">We&nbsp;would love&nbsp;to invite you to attend our wedding in Chiang Mai on the 21st of October 2017. We hope you can join us.</span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: 10pt;">Please visit the&nbsp;website to view the full details and RSVP.</span></p>
+<p>&nbsp;</p>
+<p><a title="VIEW INVITE" href="https://mdoddsc6.service-now.com/wedding?id=wedding_invite&amp;invite=${sys_id}"><strong>VIEW INVITE</strong></a></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt;">Thank you,</span></p>
+<p><span style="font-family: 'trebuchet ms', geneva; font-size: 10pt;">from Matt and Chanchira</span></p>
+<p>&nbsp;</p>
+<p>Note: This is a unique link for your invitation. Please retain it for future use, as we will be providing ongoing updates from this site.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Wedding Invitation Sent (Couple)</name>
+        <omit_watermark>true</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>guest1.email,guest2.email</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>matt_overseas@yahoo.com.au</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>You are invited to help us celebrate our wedding</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-12 16:43:13</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>83e31457db747240faa3ff78bf961989</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Wedding Invitation Sent (Couple)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sysevent_email_action_83e31457db747240faa3ff78bf961989</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-12 18:40:00</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

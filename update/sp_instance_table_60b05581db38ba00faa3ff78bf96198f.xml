@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>name</display_field>
+        <field_list>name,area,cost,website</field_list>
+        <filter/>
+        <glyph>bicycle</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>0</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">ad90d181db38ba00faa3ff78bf9619a7</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table">5001b062d7101200b0b044580e6103eb</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-05 21:16:17</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>60b05581db38ba00faa3ff78bf96198f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Things to do</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_instance_table_60b05581db38ba00faa3ff78bf96198f</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-05 21:21:31</sys_updated_on>
+        <table>x_snc_wedding_plan_things_to_do</table>
+        <title>Things to do</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=60b05581db38ba00faa3ff78bf96198f"/>
+</record_update>

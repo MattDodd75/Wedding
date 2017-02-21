@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_header_footer">
     <sp_header_footer action="INSERT_OR_UPDATE">
-        <client_script><![CDATA[function ($rootScope, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout) {
+        <client_script><![CDATA[function ($scope) {
 	$scope.userID = $scope.user.sys_id;
-	if (cabrillo.isNative())
-		$scope.isViewNative = true;
-
-	$scope.openPopUp = function() {
-		var url = "$chat_support.do?queueID=" + $scope.data.connect_support_queue_id;
-		var popup = window.open (url, "popup", "width=900, height=600"); 
-	};
-
-	$scope.openLogin = function () {
-		$scope.modalInstance = $uibModal.open({
-			templateUrl: 'modalLogin',
-			scope: $scope
-		});
-	};
-
-	$rootScope.$on('sp.avatar_changed', function() {
-		$scope.userID = "";
-		$timeout(function(){
-			$scope.userID = $scope.user.sys_id;
-		});
-	});
 
 	$scope.isHomepage = function() {
 		if (!$scope.page.id)
@@ -37,66 +16,66 @@
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.navbar {&#13;
-  transition: 250ms opacity ease-in-out; &#13;
-  -webkit-transition: 250ms opacity ease-in-out; &#13;
-  border: 0;&#13;
-  border-bottom: 4px solid $sp-navbar-divider-color;&#13;
-}&#13;
-&#13;
-.navbar-fade {&#13;
-  opacity: 0.4;&#13;
-}&#13;
-&#13;
-.navbar-inverse .navbar-toggle {&#13;
-  border-color: white;&#13;
-}&#13;
-&#13;
-.nav &gt; li &gt; a {&#13;
-  max-height: 50px;&#13;
-}&#13;
-&#13;
-.navbar-brand {&#13;
-  height: 50px;&#13;
-  padding: 0;&#13;
-}&#13;
-&#13;
-.navbar-brand img, .navbar-brand span {&#13;
-  margin-left: $sp-logo-margin-x;&#13;
-  margin-right: $sp-logo-margin-x;&#13;
-  margin-top: $sp-logo-margin-y;&#13;
-  margin-bottom: $sp-logo-margin-y;&#13;
-  display: block;&#13;
-  max-height: $sp-logo-max-height;&#13;
-  max-width: $sp-logo-max-width;&#13;
-  position: relative;&#13;
-  top: 50%;&#13;
-  -webkit-transform: translateY(-50%);&#13;
-  -ms-transform: translateY(-50%);&#13;
-  transform: translateY(-50%);&#13;
-}&#13;
-.breadcrumb-container {&#13;
-  background-color: $panel-bg;&#13;
-}&#13;
-&#13;
-/* for mobile app */&#13;
-.navbar-inverse.is-native {&#13;
-  background-color: white;&#13;
-}&#13;
-&#13;
-nav{&#13;
- margin-bottom: 0px;&#13;
- border-radius: 0px; &#13;
-}&#13;
-&#13;
-.navbar-collapse{&#13;
-padding-right: 0px;&#13;
-}&#13;
-&#13;
-.navbar-nav {&#13;
-margin: 0px;&#13;
-}&#13;
-&#13;
+        <css>.navbar {
+  transition: 250ms opacity ease-in-out; 
+  -webkit-transition: 250ms opacity ease-in-out; 
+  border: 0;
+  border-bottom: 4px solid $sp-navbar-divider-color;
+}
+
+.navbar-fade {
+  opacity: 0.4;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: black;
+}
+
+.nav &gt; li &gt; a {
+  max-height: 50px;
+}
+
+.navbar-brand {
+  height: 50px;
+  padding: 0;
+}
+
+.navbar-brand img, .navbar-brand span {
+  margin-left: $sp-logo-margin-x;
+  margin-right: $sp-logo-margin-x;
+  margin-top: $sp-logo-margin-y;
+  margin-bottom: $sp-logo-margin-y;
+  display: block;
+  max-height: $sp-logo-max-height;
+  max-width: $sp-logo-max-width;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.breadcrumb-container {
+  background-color: $panel-bg;
+}
+
+/* for mobile app */
+.navbar-inverse.is-native {
+  background-color: black;
+}
+
+nav{
+ margin-bottom: 0px;
+ border-radius: 0px; 
+}
+
+.navbar-collapse{
+padding-right: 0px;
+}
+
+.navbar-nav {
+margin: 0px;
+}
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -104,7 +83,7 @@ margin: 0px;&#13;
         <docs/>
         <field_list/>
         <has_preview>false</has_preview>
-        <id/>
+        <id>wedding-header</id>
         <internal>false</internal>
         <link><![CDATA[function(scope, element) {	
 	$(element).on('click.nav','.navbar-collapse.in',function(e) {	
@@ -129,8 +108,6 @@ margin: 0px;&#13;
         <public>true</public>
         <roles/>
         <script><![CDATA[// Defines the support queue ID that will be linked to by the Live Chat link in header
-data.connect_support_queue_id = $sp.getValue('sp_chat_queue');
-data.login_page = $sp.getValue('login_page');
 var menu = $sp.getValue("sp_rectangle_menu");
 data.menu = $sp.getWidgetFromInstance(menu);
 if (data.menu && data.menu.data) {
@@ -144,17 +121,14 @@ if (data.menu && data.menu.data) {
 				data.hasLogin = true;
 		}
 	}
-}
-
-data.loginWidget = $sp.getWidgetFromInstance('login-modal');
-data.typeahead = $sp.getWidgetFromInstance('typeahead-search');]]></script>
+}]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_header_footer</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-02-05 01:09:59</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>0e9c3478dbb87a00faa3ff78bf961923</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Wedding Header </sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -162,7 +136,7 @@ data.typeahead = $sp.getWidgetFromInstance('typeahead-search');]]></script>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_header_footer_0e9c3478dbb87a00faa3ff78bf961923</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-05 01:38:26</sys_updated_on>
+        <sys_updated_on>2017-02-12 20:17:24</sys_updated_on>
         <template><![CDATA[<div>
   <nav class="navbar-inverse" ng-class="::{'navbar':!isViewNative, 'is-native': isViewNative}"
        role="navigation">

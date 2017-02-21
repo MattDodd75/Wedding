@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description/>
+        <layout><![CDATA[<table style="width: 100%; background-color: #e7e9eb;">
+<tbody>
+<tr>
+<td>
+<table style="width: 100%; text-align: center; max-width: 800px; margin: auto;">
+<tbody>
+<tr>
+<td style="color: #e7e9eb; height: 60px; text-align: left; border-bottom: 1px solid #bec1c6; background-color: #e7e9eb; padding: 10px 0px 10px 30px;"></td>
+</tr>
+<tr>
+<td style="color: #303a46; text-align: left; font-size: 16px; background-color: #e7e9eb; padding: 25px 0px 10px 30px;">
+<p class="p1">${notification:body}</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #e7e9eb; padding-left: 30px;">
+<table style="text-align: center; background-color: #278efc; border-color: #0368d4; border-radius: 5px; color: white; height: 35px;">
+<tbody>
+<tr>
+<td style="text-align: center; color: #ffffff; padding-left: 20px; padding-right: 20px; font-size: 16px;">${mail_script:go_to_instance_hyperlink}</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="text-align: center; height: 35px;"></td>
+</tr>
+<tr>
+<td style="color: #455464; height: 50px; text-align: left; font-size: 16px; background-color: #e7e9eb; padding: 30px 0px 0px 30px;">
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>]]></layout>
+        <name>Wedding Layout - Go To Instance Button</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-12 16:45:28</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>71d550d7db747240faa3ff78bf96199d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Wedding Layout - Go To Instance Button</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_email_layout_71d550d7db747240faa3ff78bf96199d</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-12 16:46:53</sys_updated_on>
+    </sys_email_layout>
+</record_update>

@@ -30,6 +30,8 @@
         <element default="true" label="Drinker" max_length="40" name="drinker" type="boolean"/>
         <element label="Email" max_length="50" name="email" type="string"/>
         <element label="First Name" max_length="50" name="first_name" type="string"/>
+        <element label="Invited" max_length="40" name="invited" type="boolean"/>
+        <element label="Invite Phase" max_length="15" name="invite_phase" type="integer"/>
         <element label="Last Name" max_length="50" name="last_name" type="string"/>
         <element label="Meal Selection" max_length="40" name="meal_selection" type="string"/>
         <element label="Mobile" max_length="40" name="mobile" type="string"/>

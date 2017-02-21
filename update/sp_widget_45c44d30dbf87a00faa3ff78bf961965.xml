@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	c.rsvp = function(){
+		c.server.update().then(function(){
+			
+			});
+		};
+
+}]]></client_script>
         <controller_as>c</controller_as>
-        <css>.wedding-title {
+        <css>.wedding-text {
   font-family: 'Lato', sans-serif;
+  font-weight: 100;
   color: #1a1a1a;
+}
+
+.wedding-background {
+  position: fixed;
+  top: 0px; //hides header if active.
+  right: 0px;
+  background-size: cover;
+  background: url('/wedding_background.jpg') no-repeat center right fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -15,6 +40,10 @@ h1 {
 
 h3,h4 {
   letter-spacing: 0.15em; 
+}
+
+.error-msg {
+  color: white;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -27,16 +56,83 @@ h3,h4 {
         <link/>
         <name>Wedding Invite</name>
         <option_schema>[{"name":"title","default_value":"&lt;GUY&gt; &amp; &lt;GIRL&gt;","label":"Title","type":"string"},{"name":"subtitle","default_value":"ARE GETTING MARRIED","label":"Subtitle","type":"string"},{"name":"date","default_value":"&lt;DAY of MONTH, YEAR&gt;","label":"Date","type":"string"},{"name":"location","default_value":"&lt;location&gt;","label":"Location","type":"string"}]</option_schema>
-        <public>false</public>
+        <public>true</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function(input, options) {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.invite = $sp.getParameter("invite");
+	var rsvp = false;
+	
+	// If an RSVP action has taken place.
+	if (input)
+	{
+		data.valid = true;
+		data.invite = input.invite;
+
+		//update the rsvp status
+		UpdateStatus(input.guest1_sysid+"",input.guest1_status+"");
+		UpdateStatus(input.guest2_sysid+"",input.guest2_status+"");
+		
+		gs.addInfoMessage("Thank you. Your responses have been recorded.")
+		rsvp = true;
+	}		
+
+	//Check there is a valid invite
+	if (data.invite) {
+
+		//get the invite details
+		var gr = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
+		gr.addQuery("active", "true");
+		gr.addQuery("sys_id", data.invite);
+		gr.query();
+
+		if (gr.next()) {
+
+			data.rsvp = gr.response_date.getDisplayValue();
+			data.guest1 = gr.guest1.first_name.getDisplayValue();
+			data.guest1_status = gr.guest1.attending.toString();
+			data.guest1_sysid = gr.guest1.sys_id.getDisplayValue();
+			data.guest2 = gr.guest2.first_name.getDisplayValue();
+			data.guest2_status = gr.guest2.attending.toString();
+			data.guest2_sysid = gr.guest2.sys_id.getDisplayValue();
+
+			data.valid = true;
+
+			//update 'viewed' flags on the invite.
+			if(!gr.viewed){
+				gr.viewed = 'true';
+				gr.viewed_date = new GlideDateTime().getDisplayValue();
+				gr.update();
+			}
+			//update 'response' flags and comments on the invite.
+			if(rsvp)
+			{
+				gr.responded = 'true';
+				gr.response_date = new GlideDateTime().getDisplayValue();
+				gr.comments = data.guest1 + ": " + input.guest1_status + " & " + data.guest2 + ": " + input.guest2_status;
+				gr.update();						
+			}
+		}		
+	}
+
+	function UpdateStatus(sysid, status) {
+		var grUpd = new GlideRecord("x_snc_wedding_plan_guest_list");
+		grUpd.get(sysid);
+		grUpd.attending = status;
+		grUpd.update();
+		//gs.addInfoMessage("Debug:" + sysid + " " + status);
+	}
+
+})(input, options);]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>343</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -44,26 +140,76 @@ h3,h4 {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-05 03:30:49</sys_updated_on>
-        <template><![CDATA[<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
-<div class="text-center wedding-title">
-  <p>&nbsp;</p>
-  <h1>{{options.title}}</h1>
-  <p>&nbsp;</p>
-  <h3>{{options.subtitle}}</h3>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>  
-  <h4>WE INVITE YOU TO COME AND HELP CELEBRATE OUR WEDDING ON</h4>
-  <p>&nbsp;</p>
-  <h2>{{options.date}}</h2>
-  <p>&nbsp;</p>
-  <p>AT</p>
-  <p>&nbsp;</p>
-  <h2>{{options.location}}</h2>
-</div>  
+        <sys_updated_on>2017-02-20 05:01:29</sys_updated_on>
+        <template><![CDATA[<div class="wedding-background wedding-text">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <input ng-model="invite" type="hidden" placeholder="{{data.invite}}"/>
+  <input type="hidden" value="Debug: {{ data.guest1_status + " " + data.guest2_status }}"/>
+  <div ng-if="data.valid" class="text-center wedding-text">
+    <!-- Main Invite Text -->
+    <p>&nbsp;</p>
+    <h1>{{options.title}}</h1>
+    <p>&nbsp;</p>
+    <h3>{{options.subtitle}}</h3>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>Dear {{::data.guest1}} and {{::data.guest2}},</h3>  
+    <p>&nbsp;</p>
+    <h4>We invite you to come and help celebrate our wedding on</h4>
+    <p>&nbsp;</p>
+    <h2>{{options.date}}</h2>
+    <p>&nbsp;</p>
+    <h4>AT</h4>
+    <p>&nbsp;</p>
+    <h2>{{options.location}}</h2>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-]]></template>
+    <!-- RSVP Form 
+<h3>RSVP Options</h3>
+<form>
+<div class="form-group">
+<div>
+<label>
+<input type="checkbox" ng-model="c.data.guest1_status" ng-change="c.ChangeState(1);" btn-checkbox-true="true" btn-checkbox-false="false" name="guest1_status"/>{{data.guest1}} will be attending</label>
+</div>
+<div ng-if="c.data.guest2_sysid">
+<label>
+<input type="checkbox" ng-model="c.data.guest2_status" btn-checkbox-true="true" btn-checkbox-false="false" name="guest2_status"/>{{data.guest2}} will be attending</label>
+</div>
+<input type="submit" ng-click="c.rsvp();" value="Update RSVP" class="btn btn-info">
+</div>
+</form> 
+<!-- RSVP Form -->
+    <h3>RSVP Options</h3>
+    <form>
+      <div class="form-group">
+        <p ng-if="!data.rsvp">
+          Please RVSP as soon as you can.
+        </p>
+        <div>
+          <label>
+            {{data.guest1}} <select ng-model="c.data.guest1_status" name="guest1_status"><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+        </div>
+        <div ng-if="c.data.guest2_sysid">
+          <label>
+            {{data.guest2}} <select ng-model="c.data.guest2_status" name="guest2_status"><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+        </div>
+        <input type="submit" ng-click="c.rsvp();" value="Update RSVP" class="btn btn-info">
+      </div>
+    </form>
+    <p ng-if="data.rsvp">
+      Thank you for your response on {{data.rsvp | date:'MM/dd/yyyy'}} </p>
+    <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
+      We look forward to seeing you in Thailand! 
+    </p>
+  </div>
+
+  <div ng-if="!data.valid" class="text-center">
+    <H2>${Please try again using the unique link provided in your invitation email}</H2>
+
+  </div>
+</div>]]></template>
     </sp_widget>
 </record_update>
