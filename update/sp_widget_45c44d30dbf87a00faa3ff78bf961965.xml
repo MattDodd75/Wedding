@@ -2,14 +2,14 @@
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <client_script><![CDATA[function($scope) {
-  /* widget controller */
-  var c = this;
-	
+	/* widget controller */
+	var c = this;
+
 	c.rsvp = function(){
 		c.server.update().then(function(){
 			
-			});
-		};
+		});
+	};
 
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -44,6 +44,10 @@ h3,h4 {
 
 .error-msg {
   color: white;
+}
+
+.save-the-date {
+ 	//position: relative;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -55,7 +59,7 @@ h3,h4 {
         <internal>false</internal>
         <link/>
         <name>Wedding Invite</name>
-        <option_schema>[{"name":"title","default_value":"&lt;GUY&gt; &amp; &lt;GIRL&gt;","label":"Title","type":"string"},{"name":"subtitle","default_value":"ARE GETTING MARRIED","label":"Subtitle","type":"string"},{"name":"date","default_value":"&lt;DAY of MONTH, YEAR&gt;","label":"Date","type":"string"},{"name":"location","default_value":"&lt;location&gt;","label":"Location","type":"string"}]</option_schema>
+        <option_schema>[{"name":"title","default_value":"&lt;GUY&gt; &amp; &lt;GIRL&gt;","label":"Title","type":"string"},{"name":"subtitle","default_value":"ARE GETTING MARRIED","label":"Subtitle","type":"string"},{"name":"date","default_value":"&lt;DAY of MONTH, YEAR&gt;","label":"Date","type":"string"},{"name":"location","default_value":"&lt;location&gt;","label":"Location","type":"string"},{"name":"location_url","default_value":"http://www.tripadvisor.com","label":"Location URL","type":"string"},{"name":"details","default_value":"More details to follow soon... stay tuned.","label":"Details","type":"string"}]</option_schema>
         <public>true</public>
         <roles/>
         <script><![CDATA[(function(input, options) {
@@ -63,7 +67,8 @@ h3,h4 {
 	/* e.g., data.table = $sp.getValue('table'); */
 
 	data.invite = $sp.getParameter("invite");
-	var rsvp = false;
+	var hotels = [];
+	data.button_text = "Please click to RSVP";
 	
 	// If an RSVP action has taken place.
 	if (input)
@@ -74,9 +79,9 @@ h3,h4 {
 		//update the rsvp status
 		UpdateStatus(input.guest1_sysid+"",input.guest1_status+"");
 		UpdateStatus(input.guest2_sysid+"",input.guest2_status+"");
+		UpdateInvite(input.invite, input.comments, "Guest1: " + input.guest1_status + " & Guest2: " + input.guest2_status);
 		
-		gs.addInfoMessage("Thank you. Your responses have been recorded.")
-		rsvp = true;
+		gs.addInfoMessage("Thank you. Your response has been recorded.")
 	}		
 
 	//Check there is a valid invite
@@ -90,14 +95,22 @@ h3,h4 {
 
 		if (gr.next()) {
 
-			data.rsvp = gr.response_date.getDisplayValue();
+			data.rsvp_date = gr.response_date.getDisplayValue();
+			if (data.rsvp_date.length>1)
+				{	data.rsvp = true;}
+			
 			data.guest1 = gr.guest1.first_name.getDisplayValue();
-			data.guest1_status = gr.guest1.attending.toString();
 			data.guest1_sysid = gr.guest1.sys_id.getDisplayValue();
 			data.guest2 = gr.guest2.first_name.getDisplayValue();
-			data.guest2_status = gr.guest2.attending.toString();
 			data.guest2_sysid = gr.guest2.sys_id.getDisplayValue();
+			data.comments = gr.rsvp_comment.toString();
 
+			if (data.rsvp) {
+				data.guest2_status = gr.guest2.attending.toString();				
+				data.guest1_status = gr.guest1.attending.toString();
+				data.button_text = "Click to update RSVP";
+			}
+			
 			data.valid = true;
 
 			//update 'viewed' flags on the invite.
@@ -106,14 +119,18 @@ h3,h4 {
 				gr.viewed_date = new GlideDateTime().getDisplayValue();
 				gr.update();
 			}
+
 			//update 'response' flags and comments on the invite.
-			if(rsvp)
+			/*if(rsvp)
 			{
 				gr.responded = 'true';
 				gr.response_date = new GlideDateTime().getDisplayValue();
 				gr.comments = data.guest1 + ": " + input.guest1_status + " & " + data.guest2 + ": " + input.guest2_status;
+				gr.rsvp_comment = input.comments;
 				gr.update();						
-			}
+			}*/
+			//get other information about the event
+			data.hotels = GetHotels();
 		}		
 	}
 
@@ -125,6 +142,36 @@ h3,h4 {
 		//gs.addInfoMessage("Debug:" + sysid + " " + status);
 	}
 
+	function UpdateInvite(sysid, comment, status) {
+		var grUpd2 = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
+		grUpd2.get(sysid);
+		grUpd2.rsvp_comment = comment;
+		grUpd2.responded = 'true';
+		grUpd2.response_date = new GlideDateTime().getDisplayValue();
+		grUpd2.comments = status;
+		grUpd2.update();
+		//gs.addInfoMessage("Debug:" + sysid + " " + status);
+	}
+	
+	function GetHotels() {
+		var hotels = [];
+		var gr = new GlideRecord("x_snc_wedding_plan_accomodation");
+		//gr.addQuery("active", "true");
+		gr.orderBy("average_price");
+		gr.query();
+
+		while (gr.next()) {
+			var hotel = {};
+			hotel.name = gr.name+"";
+			hotel.address = gr.address.toString();
+			hotel.website = gr.website.toString();
+			hotel.price = gr.average_price+"";
+			hotels.push(hotel);
+		}
+		return hotels;
+	}
+	
+	
 })(input, options);]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -132,7 +179,7 @@ h3,h4 {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>343</sys_mod_count>
+        <sys_mod_count>485</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -140,76 +187,124 @@ h3,h4 {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-20 05:01:29</sys_updated_on>
+        <sys_updated_on>2017-03-09 00:32:42</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <input ng-model="invite" type="hidden" placeholder="{{data.invite}}"/>
   <input type="hidden" value="Debug: {{ data.guest1_status + " " + data.guest2_status }}"/>
-  <div ng-if="data.valid" class="text-center wedding-text">
-    <!-- Main Invite Text -->
-    <p>&nbsp;</p>
-    <h1>{{options.title}}</h1>
-    <p>&nbsp;</p>
-    <h3>{{options.subtitle}}</h3>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h3>Dear {{::data.guest1}} and {{::data.guest2}},</h3>  
-    <p>&nbsp;</p>
-    <h4>We invite you to come and help celebrate our wedding on</h4>
-    <p>&nbsp;</p>
-    <h2>{{options.date}}</h2>
-    <p>&nbsp;</p>
-    <h4>AT</h4>
-    <p>&nbsp;</p>
-    <h2>{{options.location}}</h2>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+  <!-- Navigation -->
+  <!--<ul class="nav nav-tabs nav-justified" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" role="tab" href="#invite">Invitation</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" role="tab" href="#accomodation">Accomodation</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" role="tab" href="#activities">Things to do</a>
+</li>
+<li class="nav-item">
+<a class="nav-link"  data-toggle="tab" role="tab" href="#other">other</a>
+</li>
+</ul>-->
 
-    <!-- RSVP Form 
-<h3>RSVP Options</h3>
-<form>
-<div class="form-group">
-<div>
-<label>
-<input type="checkbox" ng-model="c.data.guest1_status" ng-change="c.ChangeState(1);" btn-checkbox-true="true" btn-checkbox-false="false" name="guest1_status"/>{{data.guest1}} will be attending</label>
-</div>
-<div ng-if="c.data.guest2_sysid">
-<label>
-<input type="checkbox" ng-model="c.data.guest2_status" btn-checkbox-true="true" btn-checkbox-false="false" name="guest2_status"/>{{data.guest2}} will be attending</label>
-</div>
-<input type="submit" ng-click="c.rsvp();" value="Update RSVP" class="btn btn-info">
-</div>
-</form> 
-<!-- RSVP Form -->
-    <h3>RSVP Options</h3>
-    <form>
-      <div class="form-group">
-        <p ng-if="!data.rsvp">
-          Please RVSP as soon as you can.
-        </p>
-        <div>
-          <label>
-            {{data.guest1}} <select ng-model="c.data.guest1_status" name="guest1_status"><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
-        </div>
-        <div ng-if="c.data.guest2_sysid">
-          <label>
-            {{data.guest2}} <select ng-model="c.data.guest2_status" name="guest2_status"><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
-        </div>
-        <input type="submit" ng-click="c.rsvp();" value="Update RSVP" class="btn btn-info">
+  <div class="tab-content">
+    <div class="tab-pane active" id="invite" role="tabpanel">
+      <div ng-if="data.valid" class="text-center wedding-text">
+        <!-- Main Invite Text -->
+        <p>&nbsp;</p>
+        <h1>{{options.title}}</h1>
+        <p>&nbsp;</p>
+        <h3>{{options.subtitle}}</h3>
+        <p>&nbsp;</p>
+        <div class="save-the-date"><img src="save_date.png"/></div>
+        <p>&nbsp;</p>
+        <h3><span>Dear {{::data.guest1}}</span><span ng-if="data.guest2"> and {{::data.guest2}}</span><span>,</span></h3> 
+        <p>&nbsp;</p>
+        <h4>We invite you to come and help celebrate our wedding on</h4>
+        <p>&nbsp;</p>
+        <h2>{{options.date}}</h2>
+        <p>&nbsp;</p>
+        <h4>AT</h4>
+        <p>&nbsp;</p>
+        <h2><a target="_new" href="{{options.location_url}}">{{options.location}}</a></h2>
+        <p>&nbsp;</p>
+        <h4>{{options.details}}</h4>
+        <p>&nbsp;</p>
+        <!-- RSVP Form -->
+        <h3 id="rsvp"><u><B>RSVP</B> Options</u></h3>
+        <form name="form">
+          <div class="form-group">
+            <div class="col-sm-12" ng-if="!data.rsvp">
+              Please respond as soon as possible to assist us with planning.
+            </div>
+            <div class="col-sm-12">
+              <label>
+                {{data.guest1}} <select ng-model="c.data.guest1_status" name="guest1_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+              <i ng-if="data.rsvp && c.data.guest1_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="c.data.guest1_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-xs-12" ng-if="c.data.guest2_sysid">
+              <label>
+                {{data.guest2}} <select ng-model="c.data.guest2_status" name="guest2_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+              <i ng-if="c.data.guest2_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="c.data.guest2_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
+            </div>
+            <div ng-hide="false" class="form-group row">
+              <div class="col-xs-2"></div>
+              <div class="col-xs-8">
+                <input type="text" class="form-control" ng-model="c.data.comments" name="comments" placeholder="Enter any comments or requests here"/>
+              </div>
+              <div class="col-xs-2"></div>
+            </div>
+            <p ng-if="data.rsvp">
+              Thank you for your RSVP dated {{ data.rsvp_date | date: "mediumDate" }} </p>
+            <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
+              We look forward to seeing you in Thailand! 
+            </p>
+            <div class="col-xs-12">
+              <input type="submit" ng-click="c.rsvp();" value="{{data.button_text}}" class="btn btn-info">  
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
-    <p ng-if="data.rsvp">
-      Thank you for your response on {{data.rsvp | date:'MM/dd/yyyy'}} </p>
-    <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
-      We look forward to seeing you in Thailand! 
-    </p>
-  </div>
 
-  <div ng-if="!data.valid" class="text-center">
-    <H2>${Please try again using the unique link provided in your invitation email}</H2>
+      <div ng-if="!data.valid" class="text-center">
+        <H2>${Please try again using the unique link provided in your invitation email}</H2>
+      </div>
+      <br/>
+      <br/>
+      <!-- Elephant Logo -->      
+      <div><img class="img-circle img-responsive center-block" src="/elephant_small.jpg"/></div>
 
-  </div>
+    </div>
+    <!-- TAB: Accomodation -->
+    <div class="tab-pane" id="accomodation" role="tabpanel">
+      <!-- Hotel Information -->
+      <div ng-if="data.valid">
+        <p>&nbsp;</p>
+        <h3 class="text-center">${Hotels and Accomodation}</h3>
+        <p>&nbsp;</p>
+        <div class="text-bold">
+          <span class="col-xs-4">Name</span>
+          <!--<span class="col-xs-3">Location</span>-->
+          <span class="col-xs-6">Website</span>
+          <span class="col-xs-2">Avg Price($USD)</span>
+        </div>
+        <div class="" ng-repeat="hotel in data.hotels">
+          <span class="col-xs-4">{{hotel.name}}</span>
+          <!--<span class="col-xs-3">{{hotel.address}}</span>-->
+          <span class="col-xs-6"><a target="_new" ng-href="{{hotel.website}}">{{hotel.website}}</a></span>
+          <span class="col-xs-2">{{hotel.price}}</span>
+        </div>
+      </div>
+    </div>
+    <!-- TAB: Things to do -->
+    <div class="tab-pane" id="activities" role="tabpanel">things to do</div>
+    <!-- TAB: Other -->
+    <div class="tab-pane" id="other" role="tabpanel">other</div>
+  </div>  
+
+</div>
+
 </div>]]></template>
     </sp_widget>
 </record_update>

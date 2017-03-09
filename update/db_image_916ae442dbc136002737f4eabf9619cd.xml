@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>Service Portal</category>
+        <format>JPEG</format>
+        <height>66</height>
+        <image/>
+        <name>elephant_small.jpg</name>
+        <size_bytes>1830</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-21 07:18:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>916ae442dbc136002737f4eabf9619cd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>elephant_small.jpg</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>db_image_916ae442dbc136002737f4eabf9619cd</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-21 07:19:02</sys_updated_on>
+        <thumbnail/>
+        <width>50</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#f2f2f2</average_image_color>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>66</image_height>
+        <image_width>50</image_width>
+        <size_bytes>1830</size_bytes>
+        <size_compressed>1612</size_compressed>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-21 07:19:02</sys_created_on>
+        <sys_id>548a6842dbc136002737f4eabf961968</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-02-21 07:19:03</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>916ae442dbc136002737f4eabf9619cd</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="548a6842dbc136002737f4eabf961968">548a6842dbc136002737f4eabf961968</sys_attachment>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-21 07:19:02</sys_created_on>
+        <sys_id>5c8a6842dbc136002737f4eabf961968</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2136</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="548a6842dbc136002737f4eabf961968">548a6842dbc136002737f4eabf961968</sys_attachment>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-02-21 07:19:02</sys_created_on>
+        <sys_id>dc8a6842dbc136002737f4eabf961968</sys_id>
+    </sys_attachment_doc>
+</record_update>

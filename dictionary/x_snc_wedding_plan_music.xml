@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Music" max_length="40" name="x_snc_wedding_plan_music" type="collection">
+        <element label="Artist" max_length="50" name="artist" type="string"/>
+        <element label="Song Name" max_length="100" name="song_name" type="string"/>
+    </element>
+</database>
