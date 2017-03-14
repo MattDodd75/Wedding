@@ -2,13 +2,13 @@
 <record_update table="sys_push_notif_app_install">
     <sys_push_notif_app_install action="INSERT_OR_UPDATE">
         <active>true</active>
-        <last_registered_on>2017-03-08 06:03:36</last_registered_on>
+        <last_registered_on>2017-03-14 03:34:44</last_registered_on>
         <sys_class_name>sys_push_notif_app_install</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-02-13 00:38:07</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>71024213db3432402737f4eabf9619f2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>ba95843483d7fc054f0a59dd8045898e071e10a7670202bfa3f7eb425d70c19c</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -18,7 +18,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_push_notif_app_install_71024213db3432402737f4eabf9619f2</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-08 06:03:36</sys_updated_on>
+        <sys_updated_on>2017-03-14 03:34:44</sys_updated_on>
         <sys_user_id display_value="Matt Dodd">ba0ae8eadbc0fe00faa3ff78bf9619f3</sys_user_id>
         <token>ba95843483d7fc054f0a59dd8045898e071e10a7670202bfa3f7eb425d70c19c</token>
     </sys_push_notif_app_install>

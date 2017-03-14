@@ -7,11 +7,42 @@
 
 	c.rsvp = function(){
 		c.server.update().then(function(){
-			
+
 		});
 	};
 
-}]]></client_script>
+	c.bookmark = function() {
+
+		//            $(element).click(function (e) {
+		var bookmarkURL = window.location.href;
+		var bookmarkTitle = document.title;
+		var triggerDefault = false;
+
+		if (window.sidebar && window.sidebar.addPanel) {
+			// Firefox version < 23
+			window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+		} else if ((window.sidebar && (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) || (window.opera && window.print)) {
+			// Firefox version >= 23 and Opera Hotlist
+			var $this = $(this);
+			$this.attr('href', bookmarkURL);
+			$this.attr('title', bookmarkTitle);
+			$this.attr('rel', 'sidebar');
+			$this.off(e);
+			triggerDefault = true;
+		} else if (window.external && ('AddFavorite' in window.external)) {
+			// IE Favorite
+			window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+		} else {
+			// WebKit - Safari/Chrome
+			alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
+		}
+
+		return triggerDefault;
+	}	//);
+
+}
+
+//}]);]]></client_script>
         <controller_as>c</controller_as>
         <css>.wedding-text {
   font-family: 'Lato', sans-serif;
@@ -47,7 +78,20 @@ h3,h4 {
 }
 
 .save-the-date {
- 	//position: relative;
+  //position: relative;
+}
+
+.panel-transparent {
+  background: none;
+}
+
+.panel-transparent .panel-heading{
+  background: rgba(255, 255, 255, 0.5)!important;
+  //background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+  background: rgba(255, 255, 255, 0.5)!important;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -70,6 +114,7 @@ h3,h4 {
 	var hotels = [];
 	data.button_text = "Please click to RSVP";
 	
+	
 	// If an RSVP action has taken place.
 	if (input)
 	{
@@ -81,7 +126,7 @@ h3,h4 {
 		UpdateStatus(input.guest2_sysid+"",input.guest2_status+"");
 		UpdateInvite(input.invite, input.comments, "Guest1: " + input.guest1_status + " & Guest2: " + input.guest2_status);
 		
-		gs.addInfoMessage("Thank you. Your response has been recorded.")
+		gs.addInfoMessage("Thank you. Your response has been recorded.");
 	}		
 
 	//Check there is a valid invite
@@ -129,8 +174,10 @@ h3,h4 {
 				gr.rsvp_comment = input.comments;
 				gr.update();						
 			}*/
+			
 			//get other information about the event
-			data.hotels = GetHotels();
+			data.hotels = getHotels();
+			data.activities = getActivities();
 		}		
 	}
 
@@ -153,7 +200,7 @@ h3,h4 {
 		//gs.addInfoMessage("Debug:" + sysid + " " + status);
 	}
 	
-	function GetHotels() {
+	function getHotels() {
 		var hotels = [];
 		var gr = new GlideRecord("x_snc_wedding_plan_accomodation");
 		//gr.addQuery("active", "true");
@@ -171,6 +218,22 @@ h3,h4 {
 		return hotels;
 	}
 	
+		function getActivities() {
+		var activities = [];
+		var gr = new GlideRecord("x_snc_wedding_plan_things_to_do");
+		gr.orderBy("name");
+		gr.query();
+
+		while (gr.next()) {
+			var activity = {};
+			activity.name = gr.name+"";
+			activity.area = gr.area.toString();
+			activity.website = gr.website.toString();
+			activity.cost = gr.cost+"";
+			activities.push(activity);
+		}
+		return activities;
+	}
 	
 })(input, options);]]></script>
         <servicenow>false</servicenow>
@@ -179,7 +242,7 @@ h3,h4 {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>485</sys_mod_count>
+        <sys_mod_count>580</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -187,124 +250,173 @@ h3,h4 {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-09 00:32:42</sys_updated_on>
+        <sys_updated_on>2017-03-14 01:35:40</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <input ng-model="invite" type="hidden" placeholder="{{data.invite}}"/>
   <input type="hidden" value="Debug: {{ data.guest1_status + " " + data.guest2_status }}"/>
-  <!-- Navigation -->
-  <!--<ul class="nav nav-tabs nav-justified" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" data-toggle="tab" role="tab" href="#invite">Invitation</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" role="tab" href="#accomodation">Accomodation</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" role="tab" href="#activities">Things to do</a>
-</li>
-<li class="nav-item">
-<a class="nav-link"  data-toggle="tab" role="tab" href="#other">other</a>
-</li>
-</ul>-->
-
   <div class="tab-content">
-    <div class="tab-pane active" id="invite" role="tabpanel">
-      <div ng-if="data.valid" class="text-center wedding-text">
-        <!-- Main Invite Text -->
-        <p>&nbsp;</p>
-        <h1>{{options.title}}</h1>
-        <p>&nbsp;</p>
-        <h3>{{options.subtitle}}</h3>
-        <p>&nbsp;</p>
-        <div class="save-the-date"><img src="save_date.png"/></div>
-        <p>&nbsp;</p>
-        <h3><span>Dear {{::data.guest1}}</span><span ng-if="data.guest2"> and {{::data.guest2}}</span><span>,</span></h3> 
-        <p>&nbsp;</p>
-        <h4>We invite you to come and help celebrate our wedding on</h4>
-        <p>&nbsp;</p>
-        <h2>{{options.date}}</h2>
-        <p>&nbsp;</p>
-        <h4>AT</h4>
-        <p>&nbsp;</p>
-        <h2><a target="_new" href="{{options.location_url}}">{{options.location}}</a></h2>
-        <p>&nbsp;</p>
-        <h4>{{options.details}}</h4>
-        <p>&nbsp;</p>
-        <!-- RSVP Form -->
-        <h3 id="rsvp"><u><B>RSVP</B> Options</u></h3>
-        <form name="form">
-          <div class="form-group">
-            <div class="col-sm-12" ng-if="!data.rsvp">
-              Please respond as soon as possible to assist us with planning.
-            </div>
-            <div class="col-sm-12">
-              <label>
-                {{data.guest1}} <select ng-model="c.data.guest1_status" name="guest1_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
-              <i ng-if="data.rsvp && c.data.guest1_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="c.data.guest1_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
-            </div>
-            <div class="col-xs-12" ng-if="c.data.guest2_sysid">
-              <label>
-                {{data.guest2}} <select ng-model="c.data.guest2_status" name="guest2_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
-              <i ng-if="c.data.guest2_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="c.data.guest2_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
-            </div>
-            <div ng-hide="false" class="form-group row">
-              <div class="col-xs-2"></div>
-              <div class="col-xs-8">
-                <input type="text" class="form-control" ng-model="c.data.comments" name="comments" placeholder="Enter any comments or requests here"/>
-              </div>
-              <div class="col-xs-2"></div>
-            </div>
-            <p ng-if="data.rsvp">
-              Thank you for your RSVP dated {{ data.rsvp_date | date: "mediumDate" }} </p>
-            <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
-              We look forward to seeing you in Thailand! 
-            </p>
-            <div class="col-xs-12">
-              <input type="submit" ng-click="c.rsvp();" value="{{data.button_text}}" class="btn btn-info">  
-            </div>
+    <div ng-if="data.valid" class="text-center wedding-text">
+      <!-- Main Invite Text -->
+      <p>&nbsp;</p>
+      <h1>{{options.title}}</h1>
+      <p>&nbsp;</p>
+      <h3>{{options.subtitle}}</h3>
+      <p>&nbsp;</p>
+      <div class="save-the-date"><img src="save_date.png"/></div>
+      <p>&nbsp;</p>
+      <h3><span>Dear {{::data.guest1}}</span><span ng-if="data.guest2"> and {{::data.guest2}}</span><span>,</span></h3> 
+      <p>&nbsp;</p>
+      <h4>We invite you to come and help celebrate our wedding on</h4>
+      <p>&nbsp;</p>
+      <h2>{{options.date}}</h2>
+      <p>&nbsp;</p>
+      <h4>AT</h4>
+      <p>&nbsp;</p>
+      <h2><a target="_new" href="{{options.location_url}}">{{options.location}}</a></h2>
+      <p>&nbsp;</p>
+      <h4>{{options.details}}</h4>
+      <p>&nbsp;</p>
+      <!-- RSVP Form -->
+      <h3 id="rsvp"><u><B>RSVP</B> Options</u></h3>
+      <form name="form">
+        <div class="form-group">
+          <div class="col-sm-12 text-danger" ng-if="!data.rsvp">
+            Please respond as soon as possible to assist us with planning.
           </div>
-        </form>
-      </div>
-
-      <div ng-if="!data.valid" class="text-center">
-        <H2>${Please try again using the unique link provided in your invitation email}</H2>
-      </div>
-      <br/>
-      <br/>
-      <!-- Elephant Logo -->      
-      <div><img class="img-circle img-responsive center-block" src="/elephant_small.jpg"/></div>
-
-    </div>
-    <!-- TAB: Accomodation -->
-    <div class="tab-pane" id="accomodation" role="tabpanel">
-      <!-- Hotel Information -->
-      <div ng-if="data.valid">
-        <p>&nbsp;</p>
-        <h3 class="text-center">${Hotels and Accomodation}</h3>
-        <p>&nbsp;</p>
-        <div class="text-bold">
-          <span class="col-xs-4">Name</span>
-          <!--<span class="col-xs-3">Location</span>-->
-          <span class="col-xs-6">Website</span>
-          <span class="col-xs-2">Avg Price($USD)</span>
+          <div class="col-sm-12">
+            <label>
+              {{data.guest1}} <select ng-model="c.data.guest1_status" name="guest1_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+            <i ng-if="data.rsvp && c.data.guest1_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="data.rsvp && c.data.guest1_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
+          </div>
+          <div class="col-xs-12" ng-if="c.data.guest2_sysid">
+            <label>
+              {{data.guest2}} <select ng-model="c.data.guest2_status" name="guest2_status"><option ng-if="!data.rsvp" default value=""></option><option value="true">will</option><option value="false">will NOT</option></select> be attending</label>
+            <i ng-if="data.rsvp && c.data.guest2_status=='true'" class="fa fa-smile-o" aria-hidden="true"></i><i ng-if="data.rsvp && c.data.guest2_status=='false'" class="fa fa-frown-o" aria-hidden="true"></i>
+          </div>
+          <div ng-hide="false" class="form-group row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+              <input type="text" class="form-control" ng-model="c.data.comments" name="comments" placeholder="Enter any comments or requests here"/>
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+          <p ng-if="data.rsvp" class="text-success">
+            Thank you for your RSVP</p>
+          <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
+            We look forward to seeing you in Thailand! 
+          </p>
+          <div class="col-xs-12">
+            <input type="submit" ng-click="c.rsvp();" value="{{data.button_text}}" class="btn btn-info">  
+          </div>
         </div>
-        <div class="" ng-repeat="hotel in data.hotels">
-          <span class="col-xs-4">{{hotel.name}}</span>
-          <!--<span class="col-xs-3">{{hotel.address}}</span>-->
-          <span class="col-xs-6"><a target="_new" ng-href="{{hotel.website}}">{{hotel.website}}</a></span>
-          <span class="col-xs-2">{{hotel.price}}</span>
-        </div>
-      </div>
+      </form>
     </div>
-    <!-- TAB: Things to do -->
-    <div class="tab-pane" id="activities" role="tabpanel">things to do</div>
-    <!-- TAB: Other -->
-    <div class="tab-pane" id="other" role="tabpanel">other</div>
-  </div>  
 
+    <!-- SHOW ONLY THIS IF INVITE IS INVALID (No SYS_ID)-->
+    <div ng-if="!data.valid" class="text-center">
+      <H2>${Please try again using the unique link provided in your invitation email}</H2>
+    </div>      
+
+    <br/>
+    <br/>
+    <!-- Elephant Logo -->      
+    <div><img class="img-circle img-responsive center-block" src="/elephant_small.jpg"/></div>
+    <br/>
+    <br/>
+    <br/>
+    
+    <!-- MAP OF AREA -->
+    <div ng-if="data.valid" class="container text-center">
+      <h3><a target="_new" href="https://www.google.com/maps/d/embed?mid=1vZlwIHz36nPYFTzz9M977CC7qN8&hl=en">
+        Interactive map of the Area<br/>
+        <img src="wedding_map.png"></a></h3>
+    </div>
+
+    <!-- Accomodation Section -->
+    <div ng-if="data.valid" class="container table-responsive">
+      <h3 class="text-center">${Nearby Hotels / Accomodation}</h3>
+      <quote>These hotels are near the area of the wedding, but also near some of the more interesting places in Chiang Mai. 
+        There are rooms available at the wedding venue too, however they are not cheap. Please feel free to reach out and ask questions if you have any.
+      </quote>
+      <table id="accomodation" class="table table-hover">
+        <thead><tr>
+          <td>Name</td>
+          <td>Website</td>
+          <td>Avg Cost/Night (USD)</td>
+          </tr></thead>
+        <tbody><tr ng-repeat="hotel in data.hotels">
+          <td>{{hotel.name}}</td>
+          <td><a target="_new" ng-href="{{hotel.website}}">{{hotel.website}}</a></td>
+          <td>{{hotel.price | currency}}</td>
+          </tr></tbody>
+      </table>    
+    </div>
+
+    <div ng-if="data.valid" class="container table-responsive">
+      <h3 class="text-center">${Things to do in Chiang Mai}</h3>
+      <quote>These activities are nearby the area of Chiang Mai and are things we have done before ourselves. 
+        Please feel free to reach out and ask questions if you have any.
+      </quote>
+      <table id="activities" class="table table-hover">
+        <thead><tr>
+          <td>Name</td>
+          <td>Website</td>
+          <td>Avg Cost (USD)</td>
+          </tr></thead>
+        <tbody><tr ng-repeat="activity in data.activities">
+          <td>{{activity.name}} ({{activity.area}})</td>
+          <td><a target="_new" ng-href="{{activity.website}}">{{activity.website}}</a></td>
+          <td>{{activity.cost | currency}}</td>
+          </tr></tbody>
+      </table>    
+    </div>
+
+    <!-- Accomodation Section 
+<div ng-if="data.valid" id="accomodation" class="container">
+<span class="col-xs-1"></span>
+<span  class="col-xs-10 panel panel-info">
+<div class="panel-heading">
+<h3 class="text-center">${Hotels and Accomodation}</h3>
 </div>
+<div class="panel">
+<span class="col-xs-3"><b>Name</b></span>
+<span class="col-xs-6">Website</span>
+<span class="col-xs-3">Avg Cost/Night ($USD)</span>
+</div>
+<div class="panel-body panel-transparent" ng-repeat="hotel in data.hotels">
+<span class="col-xs-3">{{hotel.name}}</span>
+<span class="col-xs-6"><a target="_new" ng-href="{{hotel.website}}">{{hotel.website}}</a></span>
+<span class="col-xs-3">{{hotel.price | currency}}</span>
+</div>
+</span>
+<span class="col-xs-1"></span>
+</div>-->
 
+    <!-- Things to do Section
+<div ng-if="data.valid" id="activities" class="container">
+<span class="col-xs-1"></span>
+<span class="col-xs-10 panel panel-info">
+<div class="panel-heading">
+<h3 class="text-center">${Things to do}</h3>
+</div>
+<div class="panel">
+<span class="col-xs-4">Name</span>
+<span class="col-xs-6">Website</span>
+<span class="col-xs-2">Price($USD)</span>
+</div>
+<div class="panel-body" ng-repeat="activity in data.activities">
+<span class="col-xs-4">{{activity.name}} ({{activity.area}})</span>
+<span class="col-xs-6"><a target="_new" ng-href="{{activity.website}}">{{activity.website}}</a></span>
+<span class="col-xs-2">{{activity.cost | currency}}</span>
+</div>
+</span>
+<span class="col-xs-1"></span>
+</div>-->
+
+  </div> 
+  <!-- Bookmark button -->
+  <button ng-if="data.valid" class="btn btn-info btn-sm center-block" ng-click="c.bookmark();" value="Bookmark this page">Bookmark this page</button>
 </div>]]></template>
     </sp_widget>
 </record_update>
