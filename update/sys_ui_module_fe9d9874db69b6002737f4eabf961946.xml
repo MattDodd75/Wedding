@@ -6,9 +6,9 @@
         <filter/>
         <name>Overview</name>
         <order>5</order>
-        <path>home.do</path>
+        <path>https://mdoddsc6.service-now.com/wedding?id=wedding_overview</path>
         <path_relative_to_root>false</path_relative_to_root>
-        <roles/>
+        <roles>wedding_planner</roles>
         <sys_class_name>sys_ui_module</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-03-14 05:42:36</sys_created_on>
@@ -16,7 +16,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fe9d9874db69b6002737f4eabf961946</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Overview</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_ui_module_fe9d9874db69b6002737f4eabf961946</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-14 05:44:07</sys_updated_on>
+        <sys_updated_on>2017-03-23 18:42:02</sys_updated_on>
         <table/>
         <uncancelable>false</uncancelable>
         <view_name/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_portal_page" unload_date="2017-03-21 04:49:10">
+<record_update node_type="sys_portal_page" unload_date="2017-03-23 18:58:45">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout display_value="layout_qualys_overview">621a21679f21120034c6b6a0942e7094</layout>
         <order/>
@@ -28,104 +28,195 @@
         <view>wedding_overview</view>
         <related_items_node>
             <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone60</dropzone>
+                <offset>0</offset>
+                <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
+                <summary/>
+                <sys_created_by>matt.dodd</sys_created_by>
+                <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                <sys_id>8bd7297bdb6dfe002737f4eabf96193a</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>matt.dodd</sys_updated_by>
+                <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>03d7297bdb6dfe002737f4eabf96193c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>list</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>07d7297bdb6dfe002737f4eabf96193b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>07d7297bdb6dfe002737f4eabf96193d</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>510badc3db197200faa3ff78bf961951</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>0fd7297bdb6dfe002737f4eabf96193a</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>6c827d4bdb197200faa3ff78bf96198b</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>0fd7297bdb6dfe002737f4eabf96193c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>Comments from Guests</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>87d7297bdb6dfe002737f4eabf96193c</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8bd7297bdb6dfe002737f4eabf96193a</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>8bd7297bdb6dfe002737f4eabf96193b</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
                 <dropzone>dropzone26</dropzone>
                 <offset>0</offset>
                 <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
                 <summary/>
                 <sys_created_by>matt.dodd</sys_created_by>
-                <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                <sys_id>2c57318fdb197200faa3ff78bf9619d4</sys_id>
+                <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                <sys_id>8fd7297bdb6dfe002737f4eabf961933</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>matt.dodd</sys_updated_by>
-                <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>2457318fdb197200faa3ff78bf9619d7</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>Invitations Viewed</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>report_type</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>2857318fdb197200faa3ff78bf9619d6</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>pie</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>2c57318fdb197200faa3ff78bf9619d5</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>report_widget_description</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>current_page</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>2c57318fdb197200faa3ff78bf9619d7</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>510badc3db197200faa3ff78bf961951</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_publish</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>a057318fdb197200faa3ff78bf9619d6</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>a457318fdb197200faa3ff78bf9619d5</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>ac57318fdb197200faa3ff78bf9619d4</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>03d7297bdb6dfe002737f4eabf961934</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>b8bd2547db197200faa3ff78bf9619fe</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>5cdda547db197200faa3ff78bf961934</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">2c57318fdb197200faa3ff78bf9619d4</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>ac57318fdb197200faa3ff78bf9619d6</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>03d7297bdb6dfe002737f4eabf961936</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>07d7297bdb6dfe002737f4eabf961935</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>0bd7297bdb6dfe002737f4eabf961934</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>87d7297bdb6dfe002737f4eabf961936</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>Invitations Responded</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>8bd7297bdb6dfe002737f4eabf961935</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>pie</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>8fd7297bdb6dfe002737f4eabf961934</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">8fd7297bdb6dfe002737f4eabf961933</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>8fd7297bdb6dfe002737f4eabf961936</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>510badc3db197200faa3ff78bf961951</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -135,99 +226,88 @@
                 <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
                 <summary/>
                 <sys_created_by>matt.dodd</sys_created_by>
-                <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                <sys_id>6457318fdb197200faa3ff78bf9619d8</sys_id>
+                <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                <sys_id>c7d7297bdb6dfe002737f4eabf961937</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>matt.dodd</sys_updated_by>
-                <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>report_type</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7057318fdb197200faa3ff78bf9619da</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>43d7297bdb6dfe002737f4eabf961938</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>pie</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7457318fdb197200faa3ff78bf9619d9</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>report_widget_description</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7457318fdb197200faa3ff78bf9619db</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>43d7297bdb6dfe002737f4eabf96193a</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>510badc3db197200faa3ff78bf961951</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7c57318fdb197200faa3ff78bf9619da</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>4bd7297bdb6dfe002737f4eabf961937</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>Invitations Responded</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>b0e534e6db04fe00faa3ff78bf9619df</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <name>title</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>e457318fdb197200faa3ff78bf9619d8</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>4bd7297bdb6dfe002737f4eabf961939</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>5cdda547db197200faa3ff78bf961934</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>RSVP Numbers - Who's Attending?</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>4fd7297bdb6dfe002737f4eabf961938</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>bar</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f457318fdb197200faa3ff78bf9619da</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>c3d7297bdb6dfe002737f4eabf961939</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>true</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_publish</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">c7d7297bdb6dfe002737f4eabf961937</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f857318fdb197200faa3ff78bf9619d9</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>c7d7297bdb6dfe002737f4eabf961938</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6457318fdb197200faa3ff78bf9619d8</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>fc57318fdb197200faa3ff78bf9619d8</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>report_widget_description</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>
@@ -237,269 +317,98 @@
                 <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
                 <summary/>
                 <sys_created_by>matt.dodd</sys_created_by>
-                <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                <sys_id>6857318fdb197200faa3ff78bf9619d1</sys_id>
+                <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                <sys_id>cbd7297bdb6dfe002737f4eabf96192f</sys_id>
                 <sys_mod_count>0</sys_mod_count>
                 <sys_updated_by>matt.dodd</sys_updated_by>
-                <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_subscribe</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>6457318fdb197200faa3ff78bf9619d3</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>6857318fdb197200faa3ff78bf9619d2</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>03d7297bdb6dfe002737f4eabf961931</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>e057318fdb197200faa3ff78bf9619d2</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>report_widget_description</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>current_page</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>e057318fdb197200faa3ff78bf9619d4</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>510badc3db197200faa3ff78bf961951</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>e857318fdb197200faa3ff78bf9619d1</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>b0e534e6db04fe00faa3ff78bf9619df</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>e857318fdb197200faa3ff78bf9619d3</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>RSVP Numbers</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>report_type</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">6857318fdb197200faa3ff78bf9619d1</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>ec57318fdb197200faa3ff78bf9619d2</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>bar</value>
-                    </sys_portal_preferences>
-                </related_items_node>
-            </sys_portal>
-            <sys_portal action="INSERT_OR_UPDATE">
-                <dropzone>dropzone60</dropzone>
-                <offset>1</offset>
-                <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
-                <summary/>
-                <sys_created_by>matt.dodd</sys_created_by>
-                <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                <sys_id>7057318fdb197200faa3ff78bf9619df</sys_id>
-                <sys_mod_count>0</sys_mod_count>
-                <sys_updated_by>matt.dodd</sys_updated_by>
-                <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                <related_items_node>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>help_text_window</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7057318fdb197200faa3ff78bf9619e0</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>report_widget_description</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>report_type</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>7c57318fdb197200faa3ff78bf9619e0</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>list</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f057318fdb197200faa3ff78bf9619df</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>6c827d4bdb197200faa3ff78bf96198b</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>title</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f057318fdb197200faa3ff78bf9619e1</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>Comments from Guests</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>can_subscribe</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f457318fdb197200faa3ff78bf9619e0</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>true</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f857318fdb197200faa3ff78bf9619df</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>com.glide.ui.portal.RenderReport</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">7057318fdb197200faa3ff78bf9619df</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>f857318fdb197200faa3ff78bf9619e1</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>03d7297bdb6dfe002737f4eabf961933</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>510badc3db197200faa3ff78bf961951</value>
-                    </sys_portal_preferences>
-                </related_items_node>
-            </sys_portal>
-            <sys_portal action="INSERT_OR_UPDATE">
-                <dropzone>dropzone60</dropzone>
-                <offset>0</offset>
-                <page display_value="Wedding Overview">510badc3db197200faa3ff78bf961951</page>
-                <summary/>
-                <sys_created_by>matt.dodd</sys_created_by>
-                <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                <sys_id>bc57318fdb197200faa3ff78bf9619db</sys_id>
-                <sys_mod_count>0</sys_mod_count>
-                <sys_updated_by>matt.dodd</sys_updated_by>
-                <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                <related_items_node>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>sys_id</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>3057318fdb197200faa3ff78bf9619dc</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>8302b54bdb197200faa3ff78bf9619a8</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>3057318fdb197200faa3ff78bf9619de</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>0bd7297bdb6dfe002737f4eabf961932</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>Invalid Invitees</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>Invitations Viewed</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>3457318fdb197200faa3ff78bf9619dd</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>0fd7297bdb6dfe002737f4eabf961931</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>true</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>renderer</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>3857318fdb197200faa3ff78bf9619dc</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>4fd7297bdb6dfe002737f4eabf96192f</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>com.glide.ui.portal.RenderReport</value>
-                    </sys_portal_preferences>
-                    <sys_portal_preferences action="INSERT_OR_UPDATE">
-                        <name>current_page</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
-                        <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>3857318fdb197200faa3ff78bf9619de</sys_id>
-                        <sys_mod_count>0</sys_mod_count>
-                        <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>510badc3db197200faa3ff78bf961951</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>b8bd2547db197200faa3ff78bf9619fe</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>b857318fdb197200faa3ff78bf9619dd</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>83d7297bdb6dfe002737f4eabf961932</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
-                        <value>bar</value>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>pie</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_publish</name>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>87d7297bdb6dfe002737f4eabf961931</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
+                        <value>true</value>
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2017-03-08 17:44:17">bc57318fdb197200faa3ff78bf9619db</portal_section>
+                        <portal_section display_value="Created 2017-03-23 11:47:51">cbd7297bdb6dfe002737f4eabf96192f</portal_section>
                         <sys_created_by>matt.dodd</sys_created_by>
-                        <sys_created_on>2017-03-09 01:44:17</sys_created_on>
-                        <sys_id>bc57318fdb197200faa3ff78bf9619dc</sys_id>
+                        <sys_created_on>2017-03-23 18:47:51</sys_created_on>
+                        <sys_id>8bd7297bdb6dfe002737f4eabf961930</sys_id>
                         <sys_mod_count>0</sys_mod_count>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-03-09 01:44:17</sys_updated_on>
+                        <sys_updated_on>2017-03-23 18:47:51</sys_updated_on>
                         <value>report_widget_description</value>
                     </sys_portal_preferences>
                 </related_items_node>

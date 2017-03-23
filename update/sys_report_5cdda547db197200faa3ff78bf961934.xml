@@ -34,7 +34,8 @@
         <exp_report_attrs>true</exp_report_attrs>
         <field>responded</field>
         <field_list/>
-        <filter table="x_snc_wedding_plan_wedding_invitation">^GROUPBYresponded<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="responded"/>
+        <filter table="x_snc_wedding_plan_wedding_invitation">^GROUPBYresponded^TRENDBYsys_created_on,year<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="responded"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="TRENDBY" or="false" value="sys_created_on,year"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
@@ -61,16 +62,16 @@
         <page_hdrftr display_value="Default">0ecdb03fc3613000cef73b251eba8f5e</page_hdrftr>
         <report_drilldown/>
         <report_source/>
-        <roles/>
+        <roles>wedding_planner</roles>
         <row>active</row>
         <sc_groupby_item_id/>
         <sc_groupby_variable_id/>
         <sc_stackby_item_id/>
         <sc_stackby_variable_id/>
         <score_color display_value="Black">65b30218a9fe3dba0120df8611520d97</score_color>
-        <set_color>color_palette</set_color>
+        <set_color>chart_colors</set_color>
         <show_chart_border>false</show_chart_border>
-        <show_chart_data_label>false</show_chart_data_label>
+        <show_chart_data_label>true</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
         <show_chart_total>false</show_chart_total>
         <show_empty>false</show_empty>
@@ -85,7 +86,7 @@
         <sys_created_on>2017-03-09 01:02:45</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>5cdda547db197200faa3ff78bf961934</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Invitations Responded</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -93,7 +94,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_report_5cdda547db197200faa3ff78bf961934</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-09 01:02:45</sys_updated_on>
+        <sys_updated_on>2017-03-23 00:20:43</sys_updated_on>
         <table>x_snc_wedding_plan_wedding_invitation</table>
         <title>Invitations Responded</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
@@ -104,7 +105,7 @@
         <upper_limit/>
         <use_color_heatmap>true</use_color_heatmap>
         <use_color_palette>true</use_color_palette>
-        <user>ba0ae8eadbc0fe00faa3ff78bf9619f3</user>
+        <user>GLOBAL</user>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>
         <x_axis_grid_dotted>false</x_axis_grid_dotted>

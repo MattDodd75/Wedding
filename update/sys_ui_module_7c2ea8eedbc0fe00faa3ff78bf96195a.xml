@@ -5,7 +5,7 @@
         <application display_value="Wedding Planner">f42ea8eedbc0fe00faa3ff78bf961958</application>
         <filter/>
         <name>Guest List</name>
-        <order/>
+        <order>100</order>
         <path/>
         <path_relative_to_root>false</path_relative_to_root>
         <roles>wedding_planner</roles>
@@ -16,7 +16,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7c2ea8eedbc0fe00faa3ff78bf96195a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Guest List</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -24,7 +24,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_ui_module_7c2ea8eedbc0fe00faa3ff78bf96195a</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-13 00:48:07</sys_updated_on>
+        <sys_updated_on>2017-03-23 02:07:15</sys_updated_on>
         <table>x_snc_wedding_plan_guest_list</table>
         <uncancelable>false</uncancelable>
         <view_name/>
