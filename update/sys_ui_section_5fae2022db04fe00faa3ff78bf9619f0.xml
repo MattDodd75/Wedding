@@ -5,13 +5,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>976729cfdbd57200faa3ff78bf96191c</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>fc2f204edb423e002737f4eabf96191a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>first_name</element>
             <position>1</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5f6729cfdbd57200faa3ff78bf96191c</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>702f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>last_name</element>
             <position>2</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>df6729cfdbd57200faa3ff78bf96191c</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>f02f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>nickname</element>
             <position>3</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>536729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>742f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>partner</element>
             <position>4</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d36729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>f42f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,69 +75,69 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>576729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>782f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>attending</element>
+            <element>mobile</element>
             <position>6</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d76729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>f82f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>mobile</element>
-            <position>7</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5b6729cfdbd57200faa3ff78bf96191d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>phone</element>
-            <position>8</position>
+            <position>7</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>db6729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>7c2f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>email</element>
-            <position>9</position>
+            <position>8</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5f6729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>fc2f204edb423e002737f4eabf96191b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>no_email</element>
+            <position>9</position>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>702f204edb423e002737f4eabf96191c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -145,13 +145,13 @@
             <element>.end_split</element>
             <position>10</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>df6729cfdbd57200faa3ff78bf96191d</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>f02f204edb423e002737f4eabf96191c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -159,13 +159,13 @@
             <element>address</element>
             <position>11</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>536729cfdbd57200faa3ff78bf96191e</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>742f204edb423e002737f4eabf96191c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -173,223 +173,13 @@
             <element>country</element>
             <position>12</position>
             <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d36729cfdbd57200faa3ff78bf96191e</sys_id>
+            <sys_created_on>2017-04-12 00:42:04</sys_created_on>
+            <sys_id>f42f204edb423e002737f4eabf96191c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
             <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
-            <position>13</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>576729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type>.begin_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>drinker</element>
-            <position>14</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d76729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>vegetarian</element>
-            <position>15</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5b6729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>meal_selection</element>
-            <position>16</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>db6729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>allergies</element>
-            <position>17</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5f6729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
-            <position>18</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>df6729cfdbd57200faa3ff78bf96191e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type>.split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>bride_or_groom</element>
-            <position>19</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>536729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>accomodation</element>
-            <position>20</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d36729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>arrival_date</element>
-            <position>21</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>576729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>departure_date</element>
-            <position>22</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>d76729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>23</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5b6729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type>.end_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>comments</element>
-            <position>24</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>db6729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>invited</element>
-            <position>25</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>5f6729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>invite_phase</element>
-            <position>26</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 00:34:49</sys_created_on>
-            <sys_id>df6729cfdbd57200faa3ff78bf96191f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 00:34:49</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>no_email</element>
-            <position>27</position>
-            <sys_created_by>matt.dodd</sys_created_by>
-            <sys_created_on>2017-03-09 01:20:47</sys_created_on>
-            <sys_id>acf1754bdb197200faa3ff78bf9619dd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="Default view">5fae2022db04fe00faa3ff78bf9619f0</sys_ui_section>
-            <sys_updated_by>matt.dodd</sys_updated_by>
-            <sys_updated_on>2017-03-09 01:20:47</sys_updated_on>
+            <sys_updated_on>2017-04-12 00:42:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

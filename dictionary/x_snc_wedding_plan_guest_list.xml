@@ -41,7 +41,11 @@
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Partner" max_length="40" name="partner" reference="x_snc_wedding_plan_guest_list" type="reference"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element label="Invitation" max_length="32" name="u_invitation" reference="x_snc_wedding_plan_wedding_invitation" type="reference"/>
         <element label="Vegetarian" max_length="40" name="vegetarian" type="boolean"/>
         <element label="Viewed Invite?" max_length="40" name="viewed_invite" type="boolean"/>
+        <index name="index">
+            <element name="u_invitation"/>
+        </index>
     </element>
 </database>

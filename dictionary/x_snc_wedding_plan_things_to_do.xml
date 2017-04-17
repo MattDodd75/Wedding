@@ -15,6 +15,7 @@
         <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
         <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
         <element display="true" label="Name" max_length="100" name="name" type="string"/>
+        <element attributes="pdf_cell_type=image" label="Picture" max_length="40" name="picture" type="user_image"/>
         <element label="Website" max_length="1024" name="website" type="url"/>
     </element>
 </database>

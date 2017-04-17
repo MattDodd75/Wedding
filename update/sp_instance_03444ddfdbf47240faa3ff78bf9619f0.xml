@@ -17,7 +17,7 @@
         <sys_created_on>2017-02-12 20:08:26</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>03444ddfdbf47240faa3ff78bf9619f0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Matt &amp; Chanchira</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -25,7 +25,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_instance_03444ddfdbf47240faa3ff78bf9619f0</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-08 20:46:44</sys_updated_on>
+        <sys_updated_on>2017-04-17 06:07:59</sys_updated_on>
         <title>Matt &amp; Chanchira</title>
         <url/>
         <widget_parameters><![CDATA[{
@@ -38,16 +38,20 @@
 		"displayValue": ""
 	},
 	"date": {
-		"value": "21st of October 2017",
-		"displayValue": "21st of October 2017"
+		"value": "4:00pm on 21st of October 2017",
+		"displayValue": "4:00pm on 21st of October 2017"
 	},
 	"location": {
 		"value": "137 Pillars House, Chiang Mai, Thailand",
 		"displayValue": "137 Pillars House, Chiang Mai, Thailand"
 	},
 	"location_url": {
-		"value": "http://137pillarshotels.com/hotels/chiang-mai/",
-		"displayValue": "http://137pillarshotels.com/hotels/chiang-mai/"
+		"value": "http://137pillarschiangmai.com/",
+		"displayValue": "http://137pillarschiangmai.com/"
+	},
+	"details": {
+		"value": "More details are below.. keep scrolling :-)",
+		"displayValue": "More details are below.. keep scrolling :-)"
 	}
 }]]></widget_parameters>
     </sp_instance>

@@ -34,8 +34,8 @@ answer = true;]]></advanced_condition>
 <p>&nbsp;</p>
 <p><span style="font-size: 12pt; font-family: 'trebuchet ms', geneva;">We&nbsp;would love&nbsp;to invite you to attend our wedding in Chiang Mai on the 21st of October 2017, and hope you can join us.</span></p>
 <p><span style="font-size: 12pt; font-family: 'trebuchet ms', geneva;">Please visit the&nbsp;website to view the full details and RSVP.</span></p>
-<p style="text-align: center;"><span style="font-family: 'trebuchet ms', geneva; font-size: 12pt;"><a title="VIEW INVITE" href="https://mdoddsc6.service-now.com/wedding?id=wedding_invite&amp;invite=${sys_id}"><strong>VIEW INVITE</strong></a></span></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="wedding_email_background.jpgx" alt="" width="310" height="232" align="absbottom" />&nbsp;</p>
+<p style="text-align: center;"><span style="font-family: 'trebuchet ms', geneva; font-size: 12pt;"><a title="CLICK HERE TO VIEW INVITE" href="https://mdoddsc6.service-now.com/wedding?id=wedding_invite&amp;invite=${sys_id}"><strong>CLICK HERE TO VIEW INVITE</strong></a></span></p>
+<p><a href="https://mdoddsc6.service-now.com/wedding?id=wedding_invite&amp;invite=${sys_id}"><img style="display: block; margin-left: auto; margin-right: auto;" src="wedding_email_background.jpgx" alt="" width="310" height="232" align="absbottom" /></a>&nbsp;</p>
 <p><span style="font-size: 12pt; font-family: 'trebuchet ms', geneva;">Thank you,</span></p>
 <p><span style="font-size: 12pt; font-family: 'trebuchet ms', geneva;">from Matt and Chanchira</span></p>
 <p><span style="font-family: 'trebuchet ms', geneva; font-size: 12pt;">&nbsp;</span></p>
@@ -63,7 +63,7 @@ answer = true;]]></advanced_condition>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d4da7dfedbd93200faa3ff78bf961963</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Wedding Invitation Sent (Single)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
@@ -72,7 +72,7 @@ answer = true;]]></advanced_condition>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_action_d4da7dfedbd93200faa3ff78bf961963</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-03-08 07:21:49</sys_updated_on>
+        <sys_updated_on>2017-04-12 01:35:39</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

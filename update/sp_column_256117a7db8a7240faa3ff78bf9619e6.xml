@@ -3,24 +3,24 @@
     <sp_column action="INSERT_OR_UPDATE">
         <class_name/>
         <order>1</order>
-        <size>2</size>
+        <size>12</size>
         <size_lg/>
         <size_sm/>
         <size_xs/>
-        <sp_row display_value="1">663c458ddbf4ba00faa3ff78bf9619c6</sp_row>
+        <sp_row display_value="1">e56117a7db8a7240faa3ff78bf9619e4</sp_row>
         <sys_class_name>sp_column</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
-        <sys_created_on>2017-02-05 20:56:45</sys_created_on>
+        <sys_created_on>2017-04-17 04:21:53</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
-        <sys_id>a23c458ddbf4ba00faa3ff78bf9619c8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>256117a7db8a7240faa3ff78bf9619e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>1</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
-        <sys_update_name>sp_column_a23c458ddbf4ba00faa3ff78bf9619c8</sys_update_name>
+        <sys_update_name>sp_column_256117a7db8a7240faa3ff78bf9619e6</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-05 21:13:18</sys_updated_on>
+        <sys_updated_on>2017-04-17 04:21:53</sys_updated_on>
     </sp_column>
 </record_update>

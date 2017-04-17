@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.grid-image {
+	//max-height: 95%;
+	max-width: 95%;
+  max-height: 150px;
+}
+
+.grid-box {
+  height: 300px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>wedding_things_to_do</id>
+        <internal>false</internal>
+        <link/>
+        <name>Wedding Things to do</name>
+        <option_schema>[{"name":"title","default_value":"Things to do in Chiang Mai","label":"Title","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[var items = [];
+
+var gridItems = new GlideRecord("x_snc_wedding_plan_things_to_do");
+gridItems.orderBy("order");
+gridItems.query();
+
+while (gridItems.next()) {
+  //if (!$sp.canReadRecord("sc_cat_item", count.cat_item.sys_id.getDisplayValue()))
+  //  continue; // user does not have permission to see this item
+
+  var item = {};
+	
+	item.name = gridItems.name.getDisplayValue();
+	item.short_description = gridItems.description.getDisplayValue();
+  item.picture = gridItems.picture.getDisplayValue();
+	item.website = gridItems.website.getDisplayValue();
+	item.price = gridItems.cost.getDisplayValue();
+  item.sys_id = gridItems.sys_id.getDisplayValue();
+  items.push(item);
+}
+
+data.items = items;]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-04-17 04:30:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>66435fe7db8a7240faa3ff78bf96190b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Wedding Things to do</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_widget_66435fe7db8a7240faa3ff78bf96190b</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-04-17 04:57:56</sys_updated_on>
+        <template><![CDATA[<h1 class="font-thin m-t-none">{{::options.title}}</h1> 
+
+<div class="row" >      
+  <div class="col-sm-6 col-md-4" ng-repeat="item in data.items | orderBy: '-count' | limitTo: data.limit">
+
+    <div class="panel panel-default">
+      <a ng-if="item.website" target="_new" href="{{item.website}}" class="panel-body block">
+        <img ng-src="{{item.picture}}" ng-if="item.picture" class="m-r-sm m-b-sm grid-image" />
+        <h4 class="m-t-none m-b-xs">{{::item.name}}</h4>
+        <div class="text-muted item-short-desc">{{::item.short_description}}</div>
+      </a>
+      <div class="panel-footer">
+        <span ng-if="item.price!='$0.00'" class="pull-right item-price font-bold">Cost (USD) {{::item.price}}</span> &nbsp;
+        <span ng-if="item.price=='$0.00'" class="pull-right item-price font-bold">free!</span> &nbsp;
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

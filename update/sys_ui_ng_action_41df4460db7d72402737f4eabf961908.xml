@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_ng_action">
+    <sys_ui_ng_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>false</active>
+        <color/>
+        <comments/>
+        <condition>current.invited==false</condition>
+        <form_button>true</form_button>
+        <form_more_item>false</form_more_item>
+        <hide_when_disabled>false</hide_when_disabled>
+        <hint/>
+        <list_button>false</list_button>
+        <name>Send Invite</name>
+        <navigate_back>false</navigate_back>
+        <order>100</order>
+        <script><![CDATA[function checkInvite() {
+	var r = confirm("Are you sure you want to send the invite(s)?");
+	if (r == true) {
+		CreateInvite();
+	} 
+}
+
+CreateInvite();
+
+function isAlreadyInvited(attendee) {
+	var gr = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
+	gr.addEncodedQuery("guest1="+attendee+"^ORguest2="+attendee);
+	gr.query();
+	if (gr.next())
+		return true;
+	else
+		return false;
+}
+
+function CreateInvite() {
+	//insert a new record into the invitations table to trigger the notifications.
+	try {
+		//only create invite if one doesnt already exist.
+		if(!isAlreadyInvited(current.sys_id))
+		{
+			var gr = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
+			gr.guest1 = current.sys_id;
+			if(current.partner) {
+				gr.guest2 = current.partner; }
+			gr.insert();
+
+			//update the invited flag on the record and the partner record.
+			current.invited = true;
+			current.update();
+
+			if(current.partner) {
+				var gr1 = new GlideRecord("x_snc_wedding_plan_guest_list");
+				gr1.get(current.partner);
+				gr1.invited = true;
+				gr1.update();
+			}
+		}
+	}
+	catch(err)		{
+		gs.addWarningMessage(err.description);
+	}
+
+	//action.setRedirectURL(current);
+	gs.addInfoMessage("Invitation created successfully.");
+}]]></script>
+        <show_for>update</show_for>
+        <sys_class_name>sys_ui_ng_action</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-03-25 20:20:08</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>41df4460db7d72402737f4eabf961908</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Send Invite</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_ui_ng_action_41df4460db7d72402737f4eabf961908</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-03-27 05:24:58</sys_updated_on>
+        <table>x_snc_wedding_plan_guest_list</table>
+    </sys_ui_ng_action>
+</record_update>
