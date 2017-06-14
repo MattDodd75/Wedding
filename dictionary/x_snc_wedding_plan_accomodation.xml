@@ -3,6 +3,7 @@
     <element label="Accomodation" max_length="40" name="x_snc_wedding_plan_accomodation" type="collection">
         <element label="Address" max_length="150" name="address" type="string"/>
         <element label="Average Price" max_length="20" name="average_price" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Image" max_length="100" name="image" type="string"/>
         <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
         <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
         <element display="true" label="Name" max_length="60" name="name" type="string"/>

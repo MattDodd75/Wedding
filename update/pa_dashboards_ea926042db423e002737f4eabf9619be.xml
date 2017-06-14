@@ -15,6 +15,7 @@
         <restrict_to_roles>wedding_planner</restrict_to_roles>
         <role_override>true</role_override>
         <roles/>
+        <should_migrate_permissions>false</should_migrate_permissions>
         <sys_class_name>pa_dashboards</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-04-11 23:48:26</sys_created_on>

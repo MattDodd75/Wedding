@@ -11,6 +11,7 @@
         <element attributes="edge_encryption_enabled=true" label="RSVP Comment" max_length="200" name="rsvp_comment" type="string"/>
         <element label="Sent" max_length="40" name="sent" read_only="true" type="boolean"/>
         <element label="Sent Date" max_length="40" name="sent_date" read_only="true" type="glide_date_time"/>
+        <element label="Trip Interested?" max_length="40" name="trip_interested" type="boolean"/>
         <element label="Viewed" max_length="40" name="viewed" read_only="true" type="boolean"/>
         <element label="Viewed Date" max_length="40" name="viewed_date" read_only="true" type="glide_date_time"/>
         <index name="index">

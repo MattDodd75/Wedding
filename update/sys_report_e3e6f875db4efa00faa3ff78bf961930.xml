@@ -34,8 +34,10 @@
         <exp_report_attrs>true</exp_report_attrs>
         <field>active</field>
         <field_list/>
-        <filter table="x_snc_wedding_plan_wedding_invitation">viewed=true^EQ<item endquery="false" field="viewed" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        <filter table="x_snc_wedding_plan_wedding_invitation">viewed=true^EQ^GROUPBYactive^TRENDBYsys_created_on,year<item endquery="false" field="viewed" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="active"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="TRENDBY" or="false" value="sys_created_on,year"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
@@ -86,17 +88,17 @@
         <sys_created_on>2017-04-11 06:37:38</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>e3e6f875db4efa00faa3ff78bf961930</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name># Invitations Sent and Viewed</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name># Invitations Viewed</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_report_e3e6f875db4efa00faa3ff78bf961930</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-04-11 06:37:38</sys_updated_on>
+        <sys_updated_on>2017-05-03 01:22:16</sys_updated_on>
         <table>x_snc_wedding_plan_wedding_invitation</table>
-        <title># Invitations Sent and Viewed</title>
+        <title># Invitations Viewed</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
@@ -105,7 +107,7 @@
         <upper_limit/>
         <use_color_heatmap>true</use_color_heatmap>
         <use_color_palette>true</use_color_palette>
-        <user>ba0ae8eadbc0fe00faa3ff78bf9619f3</user>
+        <user>group</user>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>
         <x_axis_grid_dotted>false</x_axis_grid_dotted>

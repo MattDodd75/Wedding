@@ -16,67 +16,7 @@
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.navbar {
-  transition: 250ms opacity ease-in-out; 
-  -webkit-transition: 250ms opacity ease-in-out; 
-  border: 0;
-  border-bottom: 4px solid $sp-navbar-divider-color;
-}
-
-.navbar-fade {
-  opacity: 0.4;
-}
-
-.navbar-inverse .navbar-toggle {
-  border-color: black;
-}
-
-.nav &gt; li &gt; a {
-  max-height: 50px;
-}
-
-.navbar-brand {
-  height: 50px;
-  padding: 0;
-}
-
-.navbar-brand img, .navbar-brand span {
-  margin-left: $sp-logo-margin-x;
-  margin-right: $sp-logo-margin-x;
-  margin-top: $sp-logo-margin-y;
-  margin-bottom: $sp-logo-margin-y;
-  display: block;
-  max-height: $sp-logo-max-height;
-  max-width: $sp-logo-max-width;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.breadcrumb-container {
-  background-color: $panel-bg;
-}
-
-/* for mobile app */
-.navbar-inverse.is-native {
-  background-color: black;
-}
-
-nav{
- margin-bottom: 0px;
- border-radius: 0px; 
-}
-
-.navbar-collapse{
-padding-right: 0px;
-}
-
-.navbar-nav {
-margin: 0px;
-}
-
-</css>
+        <css/>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -104,31 +44,17 @@ margin: 0px;
 	});
 }]]></link>
         <name>Wedding Header </name>
-        <option_schema/>
+        <option_schema>[{"name":"title","default_value":"Post-Wedding Trip Details","label":"Title","type":"string"}]</option_schema>
         <public>true</public>
         <roles/>
-        <script><![CDATA[// Defines the support queue ID that will be linked to by the Live Chat link in header
-var menu = $sp.getValue("sp_rectangle_menu");
-data.menu = $sp.getWidgetFromInstance(menu);
-if (data.menu && data.menu.data) {
-	data.menu.data.replace = true;
-	// Hide login if menu already has link to login
-	data.hasLogin = false;
-	if (data.menu.data.menu.items) {
-		for(var i in data.menu.data.menu.items) {
-			var item = data.menu.data.menu.items[i];
-			if (item.type == 'page' && item.sp_page == data.login_page)
-				data.hasLogin = true;
-		}
-	}
-}]]></script>
+        <script/>
         <servicenow>false</servicenow>
         <sys_class_name>sp_header_footer</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-02-05 01:09:59</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>0e9c3478dbb87a00faa3ff78bf961923</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Wedding Header </sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -136,26 +62,13 @@ if (data.menu && data.menu.data) {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_header_footer_0e9c3478dbb87a00faa3ff78bf961923</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-02-12 20:17:24</sys_updated_on>
+        <sys_updated_on>2017-05-30 15:36:23</sys_updated_on>
         <template><![CDATA[<div>
   <nav class="navbar-inverse" ng-class="::{'navbar':!isViewNative, 'is-native': isViewNative}"
        role="navigation">
     <div ng-show="::!isViewNative" class="navbar-header">
-      <a class="navbar-brand" ng-if="::!portal.logo" href="?id={{::portal.homepage_dv}}"><span>{{::portal.title}}</span></a>
-      <a class="navbar-brand navbar-brand-logo" ng-if="::portal.logo" href="?id={{::portal.homepage_dv}}">
-      </a>
-
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sp-nav-bar">
-        <span class="sr-only">${Toggle navigation}</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <div sp-navbar-toggle="" class="collapse navbar-collapse navbar-right" id="sp-nav-bar">
-      <!-- Include The Menu -->
-      <sp-widget widget="data.menu"></sp-widget>
+      <H2>{{::options.title}}</H2>
+  
     </div>
   </nav>  
 </div>]]></template>

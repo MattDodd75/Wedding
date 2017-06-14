@@ -73,7 +73,7 @@
         <score_color display_value="Black">65b30218a9fe3dba0120df8611520d97</score_color>
         <set_color>one_color</set_color>
         <show_chart_border>false</show_chart_border>
-        <show_chart_data_label>false</show_chart_data_label>
+        <show_chart_data_label>true</show_chart_data_label>
         <show_chart_title>report</show_chart_title>
         <show_chart_total>false</show_chart_total>
         <show_empty>false</show_empty>
@@ -88,7 +88,7 @@
         <sys_created_on>2017-04-11 06:40:42</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>20a778b5db4efa00faa3ff78bf961902</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Invitation Response Trend</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -96,7 +96,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_report_20a778b5db4efa00faa3ff78bf961902</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-04-11 06:40:42</sys_updated_on>
+        <sys_updated_on>2017-05-03 00:13:59</sys_updated_on>
         <table>x_snc_wedding_plan_wedding_invitation</table>
         <title>Invitation Response Trend</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
@@ -107,7 +107,7 @@
         <upper_limit/>
         <use_color_heatmap>true</use_color_heatmap>
         <use_color_palette>true</use_color_palette>
-        <user>ba0ae8eadbc0fe00faa3ff78bf9619f3</user>
+        <user>group</user>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>
         <x_axis_grid_dotted>false</x_axis_grid_dotted>
@@ -116,7 +116,7 @@
         <x_axis_label_color display_value="Black">65b30218a9fe3dba0120df8611520d97</x_axis_label_color>
         <x_axis_label_size>11</x_axis_label_size>
         <x_axis_opposite>false</x_axis_opposite>
-        <x_axis_title/>
+        <x_axis_title>Time Range</x_axis_title>
         <x_axis_title_bold>true</x_axis_title_bold>
         <x_axis_title_color display_value="Black">65b30218a9fe3dba0120df8611520d97</x_axis_title_color>
         <x_axis_title_size>12</x_axis_title_size>
@@ -129,7 +129,7 @@
         <y_axis_label_color display_value="Black">65b30218a9fe3dba0120df8611520d97</y_axis_label_color>
         <y_axis_label_size>11</y_axis_label_size>
         <y_axis_opposite>false</y_axis_opposite>
-        <y_axis_title/>
+        <y_axis_title># Responses</y_axis_title>
         <y_axis_title_bold>true</y_axis_title_bold>
         <y_axis_title_color display_value="Black">65b30218a9fe3dba0120df8611520d97</y_axis_title_color>
         <y_axis_title_size>12</y_axis_title_size>

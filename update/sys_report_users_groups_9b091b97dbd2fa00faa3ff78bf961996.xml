@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="# Guests Invited">4366fc35db4efa00faa3ff78bf961912</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-04-28 20:32:32</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9b091b97dbd2fa00faa3ff78bf961996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4366fc35db4efa00faa3ff78bf961912</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_report_users_groups_9b091b97dbd2fa00faa3ff78bf961996</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-04-28 20:32:32</sys_updated_on>
+        <user_id display_value="Chanchira Chunephisal">d6dd7c6edb04fe00faa3ff78bf961900</user_id>
+    </sys_report_users_groups>
+</record_update>

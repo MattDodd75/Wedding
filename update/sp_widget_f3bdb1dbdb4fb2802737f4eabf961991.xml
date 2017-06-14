@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	
+	$(document).ready(function(){
+    
+	var clickEvent = false;
+	$('#myCarousel').carousel({
+		interval:   5000	
+	}).on('click', '.list-group .list-group-item', function() {
+			clickEvent = true;
+			$('.list-group .list-group-item').removeClass('active');
+			$(this).addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.list-group').children().length -2;
+			var current = $('.list-group .list-group-item.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.list-group .list-group-item').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body { padding-top: 50px; }
+
+#myCarousel .carousel-caption {
+    left:0;
+	right:0;
+	bottom:0;
+	text-align:left;
+	padding:10px;
+	background:rgba(0,0,0,0.6);
+	text-shadow:none;
+}
+
+#myCarousel .list-group {
+	position:absolute;
+	top:0;
+	right:0;
+	margin-right: -20px;
+}
+#myCarousel .list-group-item, 
+#myCarousel .list-group-item-action {
+	border-radius:0px;
+	cursor:pointer;
+	height: 115px;
+	margin-bottom: 5px;
+	border-width: 0 0 1px 0;
+	position: relative;
+}
+#myCarousel .list-group .active {
+	background-color:green;
+}
+#myCarousel .list-group li {
+    padding: 5px;
+}
+#myCarousel .list-group-item-action, 
+#myCarousel .list-group-item-action.active {
+    background-color: blue !important;
+    list-style: none;
+}
+
+@media (min-width: 992px) { 
+	#myCarousel {padding-right:33.3333%;}
+	#myCarousel .carousel-controls {display:none;}
+	#myCarousel .list-group .list-group-item.active::before {
+	    content: "";
+	    position: absolute;
+	    top: 50%;
+	    left: -15px;
+	    width: 0; 
+        height: 0; 
+        margin-top: -15px;
+        border-right: 15px solid green;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent; 
+    }
+}
+@media (max-width: 991px) { 
+     #myCarousel .list-group {
+    	position: relative;
+    	top: auto;
+       }
+       #myCarousel .carousel-controls {display:none;}
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>wedding_carousel</id>
+        <internal>false</internal>
+        <link/>
+        <name>Wedding Carousel</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-06-04 20:40:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f3bdb1dbdb4fb2802737f4eabf961991</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Wedding Carousel</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sp_widget_f3bdb1dbdb4fb2802737f4eabf961991</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-06-12 00:20:57</sys_updated_on>
+        <template><![CDATA[<div>
+  <div class="container">
+    <div class="panel">
+      <div class="panel-header"><h3 class="text-center">Overview</h3></div>
+      <div class="panel-body">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <a href="#"><img class="center-block" src="thailand.png" style="height:475px"></a>
+            </div><!-- End Item -->
+
+            <div class="item">
+              <a href="#"><img class="center-block" src="phuket.png" style="height:475px"></a>
+            </div><!-- End Item -->
+
+            <div class="item">
+              <a href="#"><img class="center-block" src="phi_phi.png" style="height:475px"></a>
+            </div><!-- End Item -->
+
+          </div><!-- End Carousel Inner -->
+
+
+          <ul class="list-group col-sm-4">
+            <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Typically you'll be flying in to Bangkok via most major airlines. From there you can get a connecting flight to Chiang Mai. After the wedding we're planning to head to Phuket for a night.</h4></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Next day, we're planning on heading out to Phi Phi island via the ferry.</h4></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Stay as long there as you like :-) You can fly back out from Phuket if that works for your schedule too (its an international airport)</h4></li>
+            <li class="list-group-item-action">
+              <a target="_new" href="http://www.thaiairways.com/"><h4>Thai Airlines</h4></a>
+              <a target="_new" href="http://www.bangkokair.com/full/en"><h4>Bangkok Airways</h4></a>
+            </li>
+          </ul>
+
+
+          <!-- Controls -->
+          <div class="carousel-controls">
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+
+        </div><!-- End Carousel -->
+      </div>
+    </div>
+    <div>
+      <h2 class="text-center">
+        <a href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing" target="_new">Google Interactive Travel Plan Map</a>
+      </h2>
+      <h3>
+        Travel Tips
+      </h3>
+      <ul>
+        <li>Cheap SIM cards - make sure you phone is unlocked before you go! Loads of great options - The 7 day <a href="http://www.suvarnabhumiairport.com/en/1388-pay-as-you-go" target="_new">True Move</a> pack is a good option for less than $10US</li>
+        <li>Local Language - Quick guide <a href="https://www.tripadvisor.com/Travel-g293915-s604/Thailand:Important.Phrases.html" target="_new">here</a></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

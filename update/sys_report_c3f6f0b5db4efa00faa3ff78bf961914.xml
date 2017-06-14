@@ -89,17 +89,17 @@
         <sys_created_on>2017-04-11 06:37:52</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>c3f6f0b5db4efa00faa3ff78bf961914</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name># Invitations viewed and Responded</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name># Invitations Responded</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_report_c3f6f0b5db4efa00faa3ff78bf961914</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-04-11 06:38:08</sys_updated_on>
+        <sys_updated_on>2017-05-03 01:22:47</sys_updated_on>
         <table>x_snc_wedding_plan_wedding_invitation</table>
-        <title># Invitations viewed and Responded</title>
+        <title># Invitations Responded</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>

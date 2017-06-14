@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <client_script><![CDATA[function($scope) {
+        <client_script><![CDATA[function($scope, $location, $anchorScroll) {
 	/* widget controller */
 	var c = this;
 
 	c.rsvp = function(){
 		c.server.update().then(function(){
-
 		});
 	};
 
+	c.scrollTo = function(id) {
+		var old = $location.hash();
+		$location.hash(id);
+		$anchorScroll();
+		//reset to old to keep any additional routing logic from kicking in
+		$location.hash(old);
+	};
+	
 	c.bookmark = function() {
 
-		//            $(element).click(function (e) {
+		// $(element).click(function (e) {
 		var bookmarkURL = window.location.href;
 		var bookmarkTitle = document.title;
 		var triggerDefault = false;
@@ -65,6 +72,10 @@
   overflow-y: scroll;
 }
 
+body {
+  padding-bottom:70px;
+}
+
 h1 {
   font-size: 80px; 
 } 
@@ -95,12 +106,12 @@ h3,h4 {
 }
 
 div {
-    font-size: large; 
+  font-size: medium; 
 }
 
 .grid-image {
-	//max-height: 95%;
-	max-width: 95%;
+  //max-height: 95%;
+  max-width: 95%;
   max-height: 150px;
 }
 
@@ -116,6 +127,17 @@ div {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+}
+
+.item-short-desc {
+  font-size: 16px;
+  line-height: 16px;
+  height: 32px;
+  overflow: hidden;
+}
+.show {
+  overflow: visible;
+  height: auto;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -137,8 +159,7 @@ div {
 	data.invite = $sp.getParameter("invite");
 	var hotels = [];
 	data.button_text = "Please click to RSVP";
-	
-	
+		
 	// If an RSVP action has taken place.
 	if (input)
 	{
@@ -150,7 +171,7 @@ div {
 		if(input.guest2_sysid) {
 			UpdateStatus(input.guest2_sysid+"",input.guest2_status+"");
 		}
-		UpdateInvite(input.invite, input.comments, "Guest1: " + input.guest1_status + " & Guest2: " + input.guest2_status);
+		UpdateInvite(input.invite, input.comments, "Guest1: " + input.guest1_status + " & Guest2: " + input.guest2_status, input.trip_interested+"");
 		
 		gs.addInfoMessage("Thank you. Your response has been recorded.");
 	}		
@@ -174,11 +195,13 @@ div {
 			data.guest1_sysid = gr.guest1.sys_id.getDisplayValue();
 			data.guest2 = gr.guest2.first_name.getDisplayValue();
 			data.guest2_sysid = gr.guest2.sys_id.getDisplayValue();
+			data.trip_interested = gr.trip_interested;
 			data.comments = gr.rsvp_comment.toString();
 
 			if (data.rsvp) {
 				data.guest2_status = gr.guest2.attending.toString();				
 				data.guest1_status = gr.guest1.attending.toString();
+				data.trip_interested = gr.trip_interested.toString();
 				data.button_text = "Click to update RSVP";
 			}
 			
@@ -215,13 +238,14 @@ div {
 		//gs.addInfoMessage("Debug:" + sysid + " " + status);
 	}
 
-	function UpdateInvite(sysid, comment, status) {
+	function UpdateInvite(sysid, comment, status, trip) {
 		var grUpd2 = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
 		grUpd2.get(sysid);
 		grUpd2.rsvp_comment = comment;
 		grUpd2.responded = 'true';
 		grUpd2.response_date = new GlideDateTime().getDisplayValue();
 		grUpd2.comments = status;
+		grUpd2.trip_interested = trip;
 		grUpd2.update();
 		//gs.addInfoMessage("Debug:" + sysid + " " + status);
 	}
@@ -236,8 +260,9 @@ div {
 		while (gr.next()) {
 			var hotel = {};
 			hotel.name = gr.name.getDisplayValue();
-			hotel.picture = gr.picture.getDisplayValue();
+			hotel.picture = gr.image.getDisplayValue();
 			hotel.short_description = gr.address.getDisplayValue();
+			//hotel.description = gr.description.getDisplayValue();
 			hotel.website = gr.website.getDisplayValue();
 			hotel.price = gr.average_price.getDisplayValue();
 			hotels.push(hotel);
@@ -256,7 +281,7 @@ div {
 			var activity = {};
 			activity.name = gr.name.getDisplayValue();
 			activity.area = gr.area.getDisplayValue();
-			activity.picture = gr.picture.getDisplayValue();
+			activity.picture = gr.image.getDisplayValue();
 			activity.short_description = gr.description.getDisplayValue();
 			activity.website = gr.website.getDisplayValue();
 			activity.price = gr.cost.getDisplayValue();
@@ -273,7 +298,7 @@ div {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>637</sys_mod_count>
+        <sys_mod_count>739</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -281,9 +306,35 @@ div {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-04-17 06:08:51</sys_updated_on>
+        <sys_updated_on>2017-06-13 05:56:04</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0);"><span class="glyphicon glyphicon-heart"/></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('rsvptab')">RSVP</a></li>
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('detailstab')">Details</a></li>
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('accomodationtab')">Accomodation</a></li>
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('activitytab')">Things to do</a></li>
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('childcaretab')">ChildCare</a></li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+
   <input ng-model="invite" type="hidden" placeholder="{{data.invite}}"/>
   <input type="hidden" value="Debug: {{ data.guest1_status + " " + data.guest2_status }}"/>
   <div class="tab-content">
@@ -294,7 +345,7 @@ div {
       <p>&nbsp;</p>
       <h3>{{options.subtitle}}</h3>
       <p>&nbsp;</p>
-      <div class="save-the-date"><img src="save_date.png"/></div>
+      <div class="save-the-date"><img class="img-rounded" src="engagement_logo2.png"/></div>
       <p>&nbsp;</p>
       <h3><span>Dear {{::data.guest1}}</span><span ng-if="data.guest2"> and {{::data.guest2}}</span><span>,</span></h3> 
       <p>&nbsp;</p>
@@ -304,12 +355,13 @@ div {
       <p>&nbsp;</p>
       <h4>AT</h4>
       <p>&nbsp;</p>
-      <h2><a target="_new" href="{{options.location_url}}">{{options.location}}<br><br><img width="45%" class="img-rounded" src="137Pillars_small.jpg"></a></h2>
+      <h2 class="text-bold"><a target="_new" href="{{options.location_url}}">{{options.location}}<br><br><img width="45%" class="img-rounded" src="137Pillars_small.jpg"></a></h2>
       <p>&nbsp;</p>
       <h4>{{options.details}}</h4>
       <p>&nbsp;</p>
       <!-- RSVP Form -->
-      <h3 id="rsvp"><u><B>RSVP</B> Options</u></h3>
+      <a id="rsvptab"/>
+      <h3><u><B>RSVP</B> Options</u></h3>
       <form name="form">
         <div class="form-group">
           <div class="col-sm-12 text-danger" ng-if="!data.rsvp">
@@ -336,7 +388,26 @@ div {
             Thank you for your RSVP</p>
           <p ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp">
             We look forward to seeing you in Thailand! 
-          </p>
+          </p>          
+          <div ng-hide="false" class="form-group row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+              <div class="panel panel-default">
+                <div class="panel-header">
+                  <font color="red">Update: </font>
+                </div>
+                <div class="panel-body">
+                  <h4>
+                    We are currently planning a trip down to Phuket and Phi Phi island in the following week after the wedding also (from the 23rd Oct onwards). If you are interested in joining us, please let us know by updating the option below.<br/><br/>
+			              <select ng-model="c.data.trip_interested" name="trip_interested"><option ng-if="!data.rsvp" default value=""></option><option value="true">Sure, keep me in the loop.</option><option value="false">Nope, sorry.</option></select><br/>
+                    <br/>
+                    You can click <a class="text-bold" target="_new" href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing"><b>HERE</b></a> for more information about our current plans.
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
           <div class="col-xs-12">
             <input type="submit" ng-click="c.rsvp();" value="{{data.button_text}}" class="btn btn-info">  
           </div>
@@ -355,7 +426,7 @@ div {
     <div><img class="img-circle img-responsive center-block" src="/elephant_small.jpg"/></div>
     <br/>
     <!-- Planning the trip -->
-    <div ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp" class="container text-center">
+    <div id="detailstab" ng-if="(data.guest1_status=='true' || data.guest2_status=='true') && data.rsvp" class="container text-center">
       <h2>Planning the trip</h2>
       We are thrilled you will be joining us! Our current plan is to spend some time with people after the wedding, and then perhaps heading south to visit some of the beautiful islands that are
       to the south of Thailand. If you are interested in joining us for this trip, please let us know. More details will be provided on this site as our planning efforts continue.
@@ -364,15 +435,18 @@ div {
     <br/>
     <!-- MAP OF AREA -->
     <div ng-if="data.valid" class="container text-center">
-      <h2><a target="_new" href="https://www.google.com/maps/d/embed?mid=1vZlwIHz36nPYFTzz9M977CC7qN8&hl=en">
+      <!--<h2><a target="_new" href="https://www.google.com/maps/d/embed?mid=1vZlwIHz36nPYFTzz9M977CC7qN8&hl=en">
+Interactive map of the Area<br/>
+<img src="wedding_map.png"></a></h2>-->
+      <h2><a target="_new" href="https://www.google.com/maps/d/viewer?mid=15Ffp5fGIJqUPEPtnmOI10FCQCiM&ll=18.785917782818004%2C98.99080280199132&z=14">
         Interactive map of the Area<br/>
-        <img src="wedding_map.png"></a></h2>
+        <img class="img-responsive center-block" src="wedding_map.png"></a></h2>
       (Click to open in a new window)
     </div>
     <br/>
     <br/>
     <!-- Accomodation Section -->
-    <div ng-if="data.valid" class="container table-responsive">
+    <div id="accomodationtab" ng-if="data.valid" class="container table-responsive">
       <h2 class="text-center">${Nearby Hotels / Accomodation}</h2>
       <quote>These hotels are near the area of the wedding, but also near some of the more interesting places in Chiang Mai. 
         There are rooms available at the wedding venue too, however they are not cheap. Please feel free to reach out and ask questions if you have any.
@@ -382,13 +456,14 @@ div {
       <div class="row" >      
         <div class="col-sm-6 col-md-4" ng-repeat="hotel in data.hotels | orderBy: '-count' | limitTo: data.limit">
           <div class="panel panel-default">
-            <a ng-if="hotel.website" target="_new" href="{{hotel.website}}" class="panel-body block">
+            <a ng-if="hotel.website" target="_new" href="{{hotel.website}}" class="panel-body block" data-toggle="tooltip" title="{{::hotel.short_description}}">
               <img ng-src="{{hotel.picture}}" ng-if="hotel.picture" class="m-r-sm m-b-sm grid-image" />
               <h4 class="m-t-none m-b-xs">{{::hotel.name}}</h4>
               <!--<div class="text-muted item-short-desc">{{::hotel.short_description}}</div>-->
+              <!--<div ng-class="{show: show}" class="text-muted item-short-desc">{{::hotel.short_description}}</div>-->
             </a>
-            <div class="panel-footer">
-              <span class="pull-right item-price font-bold">Estimated Price (USD) {{::hotel.price}}</span> &nbsp;
+            <div class="panel-footer text-muted">
+              <span class="pull-right item-price font-bold">Rough Price (USD) {{::hotel.price}}</span> &nbsp;
             </div>
           </div>
         </div>
@@ -396,7 +471,7 @@ div {
     </div>
     <br/>
     <br/>
-    <div ng-if="data.valid" class="container table-responsive">
+    <div id="activitytab" ng-if="data.valid" class="container table-responsive">
       <h2 class="text-center">${Things to do in Chiang Mai}</h2>
       <quote>These activities are nearby the area of Chiang Mai and are things we have done before ourselves. Pricing is very rough, but information is provided on most of the
         the websites. Please feel free to reach out and ask questions if you have any.
@@ -406,13 +481,13 @@ div {
       <div class="row" >      
         <div class="col-sm-6 col-md-4" ng-repeat="activity in data.activities | orderBy: '-count' | limitTo: data.limit">
           <div class="panel panel-default">
-            <a ng-if="activity.website" target="_new" href="{{activity.website}}" class="panel-body block">
+            <a ng-if="activity.website" target="_new" href="{{activity.website}}" class="panel-body block" data-toggle="tooltip" title="{{::activity.short_description}}">
               <img ng-src="{{activity.picture}}" ng-if="activity.picture" class="m-r-sm m-b-sm grid-image" />
               <h4 class="m-t-none m-b-xs">{{::activity.name}}</h4>
               <!--<h6 ng-if="activity.area" class="m-t-none m-b-xs">Area: {{::activity.area}}</h6>
-              <div class="text-muted item-short-desc">{{::activity.short_description}}</div>-->
+<div class="text-muted item-short-desc">{{::activity.short_description}}</div>-->
             </a>
-            <div class="panel-footer">
+            <div class="panel-footer text-muted">
               <span class="pull-left badge badge-info">{{::activity.category}}</span><span ng-if="activity.price!='$0.00'" class="pull-right item-price font-bold">Rough Price (USD) {{::activity.price}}</span> &nbsp;
               <span ng-if="activity.price=='$0.00' && activity.category!='Dining'" class="pull-right item-price font-bold">free!</span> &nbsp;
             </div>
@@ -422,7 +497,7 @@ div {
     </div>
     <br/>
     <br/>
-    <div ng-if="data.valid"  class="container table-responsive">
+    <div id="childcaretab" ng-if="data.valid"  class="container table-responsive">
       <h2 class="text-center">Child Minding Services</h2>
       <p class="text-center">While we do not have any space for children to attend the event itself, there are child-minding services
         available from the hotel. We may be able to accomodate infants however, where the child-minding services are not suitable. Please get in touch to discuss. The costs and details of the child-minding services are as follows:</p>
@@ -437,6 +512,18 @@ div {
   </div> 
   <!-- Bookmark button -->
   <button ng-if="data.valid" class="btn btn-info btn-sm center-block" ng-click="c.bookmark();" value="Bookmark this page">Bookmark this page</button>
-</div>]]></template>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>]]></template>
     </sp_widget>
 </record_update>
