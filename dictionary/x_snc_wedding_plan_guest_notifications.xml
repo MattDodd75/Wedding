@@ -2,6 +2,8 @@
 <database>
     <element label="Guest Notifications" max_length="40" name="x_snc_wedding_plan_guest_notifications" type="collection">
         <element label="Message" max_length="5000" name="message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="We look forward to seeing you there!" label="Footer" max_length="100" name="message_footer" type="string"/>
+        <element label="Message HTML" max_length="65536" name="message_html" type="html"/>
         <element attributes="edge_encryption_enabled=true" label="Subject" max_length="100" name="message_subject" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Send Date" max_length="40" name="send_date" type="glide_date_time"/>

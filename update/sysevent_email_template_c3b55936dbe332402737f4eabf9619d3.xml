@@ -5,7 +5,7 @@
         <email_layout/>
         <message/>
         <message_html><![CDATA[<p style="text-align: center;">&nbsp;</p>
-<table style="text-align: center;" width="225">
+<table style="text-align: center;" width="80%">
 <tbody>
 <tr>
 <td style="background-color: #d4d6d6;">
@@ -13,14 +13,16 @@
 <p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">Dear ${mail_script:wedding-invite-greeting},<br /></span></p>
 <p style="text-align: center;"><span style="color: #333333;">&nbsp;</span></p>
 <p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">&nbsp;${message}</span></p>
+<p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">${message_html}</span></p>
 <p style="text-align: center;"><span style="color: #333333;">&nbsp;</span></p>
-<p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">As a reminder, your link to your wedding&nbsp;invitation is at the link below</span></p>
 <p style="text-align: center;">&nbsp;</p>
+<p><span style="color: #333333; font-size: 12pt;">&nbsp;${message_footer}</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #333333; font-size: 12pt;">Matt and Chanchira</span></p>
+<p><span style="color: #333333; font-size: 12pt;">xxx</span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">As a reminder, your link to your wedding&nbsp;invitation is below:&nbsp;</p>
 <p style="text-align: center;"><span style="color: #0000ff; font-size: 12pt;"><strong>${mail_script:wedding-invite-link}</strong></span></p>
-<p style="text-align: center;"><span style="color: #808080; font-size: 12pt;">&nbsp;&nbsp;</span></p>
-<p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">&nbsp;We hope to see you there!</span></p>
-<p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">Matt and Chanchira</span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; color: #333333;">xxx</span></p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><span style="font-size: 12pt;"><span style="color: #575757;"><img title="" src="elephant_small.jpgx" alt="" align="baseline" border="" hspace="" vspace="" /></span></span></p>
 </td>
@@ -42,7 +44,7 @@
         <sys_created_on>2017-06-28 01:02:52</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>c3b55936dbe332402737f4eabf9619d3</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Wedding Update Template</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -50,7 +52,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_template_c3b55936dbe332402737f4eabf9619d3</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-06-28 02:57:30</sys_updated_on>
+        <sys_updated_on>2017-06-28 17:55:36</sys_updated_on>
         <sys_version>2</sys_version>
     </sysevent_email_template>
 </record_update>
