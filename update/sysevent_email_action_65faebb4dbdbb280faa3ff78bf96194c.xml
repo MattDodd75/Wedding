@@ -1,63 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
-        <action_insert>false</action_insert>
+        <action_insert>true</action_insert>
         <action_update>false</action_update>
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <collection>x_snc_wedding_plan_wedding_invitation</collection>
+        <collection>x_snc_wedding_plan_guest_notifications</collection>
         <condition/>
         <content_type>text/html</content_type>
         <description/>
-        <event_name/>
-        <event_parm_1>false</event_parm_1>
+        <event_name>x_snc_wedding_plan.wedding.notification</event_name>
+        <event_parm_1>true</event_parm_1>
         <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
         <force_delivery>false</force_delivery>
         <from/>
-        <generation_type>engine</generation_type>
+        <generation_type>event</generation_type>
         <importance/>
         <include_attachments>false</include_attachments>
         <item>event.parm1</item>
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p style="text-align: center;"><span style="font-family: helvetica;">&nbsp;</span></p>
-<table style="height: 63px; text-align: center; font-family: SourceSansPro; background-color: #d4d6d6; border-radius: 5px; margin-left: auto; margin-right: auto;" width="225">
-<tbody>
-<tr>
-<td style="background-color: #d4d6d6;">
-<p><img style="align: baseline;" title="" src="email_banner.pngx" alt="" align="baseline" border="" hspace="" vspace="" /></p>
-<p style="text-align: center;"><span style="font-size: 12pt; color: #575757; font-family: helvetica;">Dear ${mail_script:wedding-invite-greeting},</span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; color: #575757; font-family: helvetica;">Just wanted to remind you about your pending invitation to our wedding!</span></p>
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="color: #0000ff;"><strong><a style="color: #0000ff;" title="Invitation Link" href="https://mdoddsc6.service-now.com/wedding?id=wedding_invite&amp;invite=${sys_id}" target="_blank"><span style="font-size: 12pt; font-family: helvetica;">Invitation Link</span></a></strong></span><span style="font-size: 12pt; color: #575757; font-family: helvetica;"><br /><br /></span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; color: #575757; font-family: helvetica;">Also a few updates:&nbsp;</span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; font-family: helvetica;">We are planning to do a few activities around the date of the wedding, and also a trip after the wedding down to Phuket and Phi Phi islands, if anyone is interested. I've added a bunch of information and details to the invitation website at the link above. If you are interested in joining us, please update the&nbsp;box on the RSVP and let us know.</span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; font-family: helvetica;">&nbsp;</span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; font-family: helvetica;"><span style="color: #575757;">We hope to see you there!</span></span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; font-family: helvetica;"><span style="color: #575757;">Matt and Chanchira</span></span></p>
-<p style="text-align: center;"><span style="font-size: 12pt; font-family: helvetica;"><span style="color: #575757;">xxx</span></span></p>
-</td>
-</tr>
-</tbody>
-</table>
-<p style="text-align: center;"><span style="font-family: helvetica;"><img title="" src="elephant_small.jpgx" alt="" align="baseline" border="" hspace="" vspace="" /><br />&nbsp;</span></p>]]></message_html>
+        <message_html/>
         <message_list/>
         <message_text/>
-        <name>Wedding Invitation Reminder Update</name>
+        <name>Wedding Invitation Guest Notification</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
         <recipient_groups/>
-        <recipient_users>ba0ae8eadbc0fe00faa3ff78bf9619f3</recipient_users>
-        <reply_to/>
+        <recipient_users/>
+        <reply_to>matt_overseas@yahoo.com.au</reply_to>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Matt and Chanchira - Wedding RSVP Update</subject>
+        <subject/>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
@@ -66,8 +46,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>65faebb4dbdbb280faa3ff78bf96194c</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>Wedding Invitation Reminder Update</sys_name>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Wedding Invitation Guest Notification</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -75,9 +55,9 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_action_65faebb4dbdbb280faa3ff78bf96194c</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-06-13 06:11:14</sys_updated_on>
+        <sys_updated_on>2017-06-28 01:06:21</sys_updated_on>
         <sys_version>2</sys_version>
-        <template/>
+        <template display_value="Wedding Update Template">c3b55936dbe332402737f4eabf9619d3</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>

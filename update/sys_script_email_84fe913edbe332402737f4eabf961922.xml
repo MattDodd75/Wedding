@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>wedding-invite-link</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+   	//get the SYS_ID of the Invitation for the user
+	//var details = event.parm2;
+	var invite = JSON.parse(event.parm2);
+	gs.info(invite);
+	var sys_id = invite.recipientInvite;
+	//6001f88edb423e002737f4eabf9619d8
+
+	var link = "<a target='_blank' href='https://mdoddsc6.service-now.com/wedding?id=wedding_invite&invite=" + sys_id + "' style='background-color: #008CBA; border: none; color: white;  padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;'>VIEW INVITATION</a>";	
+	
+	gs.info(link);
+	
+	//Write to the Invitation email
+	template.print(link);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-06-28 01:48:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>84fe913edbe332402737f4eabf961922</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>wedding-invite-link</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_script_email_84fe913edbe332402737f4eabf961922</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-06-28 03:19:34</sys_updated_on>
+    </sys_script_email>
+</record_update>

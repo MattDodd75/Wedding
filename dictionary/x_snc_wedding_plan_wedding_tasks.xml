@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Wedding Tasks" max_length="40" name="x_snc_wedding_plan_wedding_tasks" sizeclass="9" type="collection"/>
+    <element extends="task" label="Wedding Tasks" max_length="40" name="x_snc_wedding_plan_wedding_tasks" sizeclass="10" type="collection"/>
 </database>

@@ -4,25 +4,32 @@
         <name>wedding-invite-greeting</name>
         <new_lines_to_html>false</new_lines_to_html>
         <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
-          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
-          /* Optional GlideRecord */ event) {
-	
-	var guests = "";
-	if (current.guest2) {
-		guests = current.guest1.first_name.getDisplayValue() + " & " + current.guest2.first_name.getDisplayValue();
-	}
-	else {
-		guests = current.guest1.first_name.getDisplayValue();
-	}
-    template.print(guests);
+	/* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+	/* Optional GlideRecord */ event) {
 
+	var guests = "";	
+	
+	//Event Source
+	if(event.sys_id) {
+		//get the recipientFirstName attribute from Parm2 JSON.
+		var recipient = JSON.parse(event.parm2);
+		var guestName = recipient.recipientFirstName;
+		var partnerName = recipient.recipientPartner;
+		guests = guestName;
+		if (partnerName) {
+			guests += " & " + partnerName;
+		}
+	}
+
+	template.print(guests);
+	
 })(current, template, email, email_action, event);]]></script>
         <sys_class_name>sys_script_email</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
         <sys_created_on>2017-06-12 01:38:44</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>ecd97ee9db1b7200faa3ff78bf9619fe</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>wedding-invite-greeting</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -30,6 +37,6 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_script_email_ecd97ee9db1b7200faa3ff78bf9619fe</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-06-13 05:26:48</sys_updated_on>
+        <sys_updated_on>2017-06-28 03:04:35</sys_updated_on>
     </sys_script_email>
 </record_update>

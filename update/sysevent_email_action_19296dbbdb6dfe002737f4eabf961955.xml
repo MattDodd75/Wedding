@@ -44,7 +44,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Wedding RSVP: ${mail_script:wedding-invite-greeting}</subject>
+        <subject>Wedding RSVP: ${guest1} &amp; ${guest2}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
@@ -53,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>19296dbbdb6dfe002737f4eabf961955</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Wedding Invitation RSVP</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
@@ -62,7 +62,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_action_19296dbbdb6dfe002737f4eabf961955</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-06-12 05:43:00</sys_updated_on>
+        <sys_updated_on>2017-06-19 16:03:51</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_wedding_plan_guest_notifications</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_snc_wedding_plan_guest_notifications">send_dateVALCHANGES^EQ<item endquery="false" field="send_date" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Schedule Notification to be Sent</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	try{	
+		var recipients = weddingNotificationRecipients(current.target_audience);
+		if(recipients == []) return;
+
+		for (var i = 0; i < recipients.length; i++) {
+			gs.info('Sending message to recipient: ' + recipients[i].name + ' : ' + recipients[i].email + ' at ' + current.send_date.toString());
+
+			var strParm2 = JSON.stringify({
+				notificationId : current.sys_id + '',
+				recipientId : recipients[i].sys_id + '',
+				recipientFirstName : recipients[i].first_name + '',
+				recipientEmail : recipients[i].email + '',
+				recipientInvite : recipients[i].invitation + '',
+				recipientPartner : recipients[i].partner
+			}); 
+
+			var send_time = new GlideDateTime(current.send_date);
+			
+			gs.eventQueueScheduled('x_snc_wedding_plan.wedding.notification', current, recipients[i].email, strParm2, send_time);
+		}
+	}
+	catch (err) {
+		gs.addErrorMessage('Error occurred: ' + err.message);
+	}
+	//function to get recipients of notification
+	function weddingNotificationRecipients(filter) {
+
+		var recipients = [];
+		var filterString = '';
+
+		var gr = new GlideRecord('x_snc_wedding_plan_guest_list');
+		switch(filter) {
+			case 'attendees':
+				filterString = 'attending=true^u_invitation.responded=true^emailISNOTEMPTY^invited=true';
+				break;
+			case 'no_response':
+				filterString = 'emailISNOTEMPTY^invited=true^u_invitation.responded=false';
+				break;
+			case 'trip':
+				filterString = 'emailISNOTEMPTY^invited=true^u_invitation.trip_interested=true';
+				break;
+			default:
+				filterString = 'emailISNOTEMPTY^invited=true^name=matt dodd^ORname=chanchira dodd';
+				break;
+		}
+
+		gr.addEncodedQuery(filterString);
+		gr.query();
+		while(gr.next()) {
+			recipients.push({
+				sys_id : gr.sys_id + '',
+				first_name : gr.first_name + '',
+				last_name : gr.last_name + '',
+				name : gr.name.getDisplayValue(),
+				partner : gr.partner.first_name + '',
+				email : gr.email + '',
+				invitation : gr.u_invitation + ''
+			});
+		}
+		return recipients;
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-06-26 00:12:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>73953242db23fe00faa3ff78bf961947</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Schedule Notification to be Sent</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_script_73953242db23fe00faa3ff78bf961947</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-06-28 03:10:52</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=73953242db23fe00faa3ff78bf961947"/>
+</record_update>

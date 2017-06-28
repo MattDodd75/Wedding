@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Guest Notifications" max_length="40" name="x_snc_wedding_plan_guest_notifications" type="collection">
+        <element label="Message" max_length="5000" name="message" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Subject" max_length="100" name="message_subject" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Send Date" max_length="40" name="send_date" type="glide_date_time"/>
+        <element label="Sent Date" max_length="40" name="sent_date" type="glide_date_time"/>
+        <element choice="1" label="Target Audience" max_length="40" name="target_audience" type="choice">
+            <choice>
+                <element label="Guests who are attending" sequence="0" value="attendees"/>
+                <element label="Guests who have not responded" sequence="1" value="no_response"/>
+                <element label="Guests who are interested in the trip" sequence="2" value="trip"/>
+                <element label="Matt and CC" sequence="3" value="test"/>
+            </choice>
+        </element>
+    </element>
+</database>

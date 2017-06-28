@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_snc_wedding_plan.WeddingNotification</api_name>
+        <client_callable>false</client_callable>
+        <description>//not working currently</description>
+        <name>WeddingNotification</name>
+        <script><![CDATA[var WeddingNotification = Class.create();
+WeddingNotification.prototype = {
+	initialize: function() {
+	},
+	
+	
+	//function to check for any notification
+	weddingNotificationToday : function() {
+		var wn = GlideRecord('x_snc_wedding_plan_guest_notifications');
+		wn.addEncodedQuery('');
+		wn.query();
+		if(wn.next())
+			return wn;
+
+		return false;		
+	},
+
+	//function to get recipients of notification
+	weddingNotificationRecipients : function(filter) {
+
+		var recipients = [];
+		var filterString = '';
+
+		var gr = new GlideRecord('x_snc_wedding_plan_guest_list');
+		switch(filter) {
+			case 'attendees':
+				filterString = 'attending=true^u_invitation.responded=true^emailISNOTEMPTY^invited=true';
+				break;
+			case 'no_response':
+				filterString = 'emailISNOTEMPTY^invited=true^u_invitation.responded=false';
+				break;
+			case 'trip':
+				filterString = 'emailISNOTEMPTY^invited=true^u_invitation.trip_interested=true';
+				break;
+			default:
+				filterString = 'emailISNOTEMPTY^invited=true^name=matt dodd';
+				break;
+		}
+		
+		gr.addEncodedQuery(filterString);
+		gr.query();
+		while(gr.next()) {
+			recipients.push({
+				sys_id : gr.sys_id + '',
+				first_name : gr.first_name + '',
+				last_name : gr.last_name + '',
+				name : gr.name.getDisplayValue(),
+				email : gr.email + ''
+			});
+		}
+		return recipients;
+	},
+
+	//function Send
+	send : function() {
+		
+		var weddingNotificationToday = this.weddingNotificationToday();
+		
+		if(weddingNotificationToday) {
+			
+			var recipients = this.weddingNotificationRecipients();
+			if(recipients == []) return;
+			
+			for (var i = 0; i < recipients.length; i++) {
+				gs.info('Sending to recipient: ' + recipients[i].name + ' : ' + recipients[i].email );
+				
+				var strParm2 = JSON.stringify({
+					notificationId : weddingNotificationToday.sys_id + '',
+					recipientId : recipients[i].sys_id + '',
+					recipientFirstName : recipients[i].first_name + ''
+				});
+				
+				gs.eventQueueScheduled('wedding.notification', current, recipient[i].sys_id, strParm2);
+			}
+			return;
+			
+		}
+		else {
+			gs.info('No notification messages needed sending today');
+			return;
+		}
+		
+	},
+	
+type: 'WeddingNotification'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-06-19 04:13:17</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>82df0777db573a00faa3ff78bf961936</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>WeddingNotification</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sys_script_include_82df0777db573a00faa3ff78bf961936</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-06-26 00:25:32</sys_updated_on>
+    </sys_script_include>
+</record_update>
