@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-06-30 22:46:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1dc01837db23f2402737f4eabf9619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Send Invite.wedding_planner</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_ui_action display_value="Send Invite">a80c941fdb747240faa3ff78bf9619c0</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_1dc01837db23f2402737f4eabf9619e2</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-06-30 22:46:02</sys_updated_on>
+        <sys_user_role display_value="wedding_planner" name="wedding_planner">8e4ba06edbc0fe00faa3ff78bf9619da</sys_user_role>
+    </sys_ui_action_role>
+</record_update>

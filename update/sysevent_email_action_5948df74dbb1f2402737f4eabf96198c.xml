@@ -32,7 +32,7 @@
 <p>Interested in the trip?: ${trip_interested}</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Wedding Invitation RSVP (Single)</name>
+        <name>Wedding Guest RSVP (Single)</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -52,8 +52,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5948df74dbb1f2402737f4eabf96198c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Wedding Invitation RSVP (Single)</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Wedding Guest RSVP (Single)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_action_5948df74dbb1f2402737f4eabf96198c</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-06-12 05:47:29</sys_updated_on>
+        <sys_updated_on>2017-07-05 07:37:31</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

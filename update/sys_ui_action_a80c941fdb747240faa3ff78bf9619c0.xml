@@ -9,7 +9,7 @@
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
-        <form_link>false</form_link>
+        <form_link>true</form_link>
         <hint/>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
@@ -49,7 +49,8 @@ function CreateInvite() {
 			var gr = new GlideRecord("x_snc_wedding_plan_wedding_invitation");
 			gr.guest1 = current.sys_id;
 			if(current.partner) {
-				gr.guest2 = current.partner;}
+				gr.guest2 = current.partner;
+			}
 			gr.insert();
 
 			//update the invited flag on the record and the partner record.
@@ -84,7 +85,7 @@ function CreateInvite() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a80c941fdb747240faa3ff78bf9619c0</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Send Invite</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
@@ -93,7 +94,7 @@ function CreateInvite() {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_ui_action_a80c941fdb747240faa3ff78bf9619c0</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-04-12 00:48:28</sys_updated_on>
+        <sys_updated_on>2017-07-07 03:03:52</sys_updated_on>
         <table>x_snc_wedding_plan_guest_list</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

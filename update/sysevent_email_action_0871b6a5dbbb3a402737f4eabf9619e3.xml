@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition><![CDATA[current.sent = true;
+current.sent_date = new GlideDateTime().getDisplayValue();
+current.update();
+
+answer = true;]]></advanced_condition>
+        <affected_field_on_event/>
+        <collection>x_snc_wedding_plan_wedding_invitation</collection>
+        <condition table="x_snc_wedding_plan_wedding_invitation">guest1=eeae7feddbdb7200faa3ff78bf961910^sent=false^active=true^EQ<item display_table="x_snc_wedding_plan_guest_list" display_value="Matt Dodd" endquery="false" field="guest1" goto="false" newquery="false" operator="=" or="false" value="eeae7feddbdb7200faa3ff78bf961910"/>
+            <item endquery="false" field="sent" goto="false" newquery="false" operator="=" or="false" value="false"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <description/>
+        <event_name>x_snc_wedding_plan.wedding.send_invite</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p style="text-align: center;">&nbsp;</p>
+<table style="text-align: center; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="background-color: #d4d6d6;">
+<p><img title="" src="email_banner.pngx" alt="" align="baseline" border="" hspace="" vspace="" /></p>
+<p style="text-align: center;"><span style="color: #333333; font-size: 12pt;">Dear ${mail_script:wedding-invite-greeting},</span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 12pt;">We&nbsp;would love&nbsp;to invite you to attend our wedding in Chiang Mai, Thailand on the 21st of October 2017, and hope you can join us. Please visit the&nbsp;website to view the full details and RSVP.</span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Your unique link to your wedding&nbsp;invitation is below. Please click through&nbsp;to the information provided and provide a response as soon as you can.</span>&nbsp;</p>
+<p style="text-align: center;"><span style="color: #0000ff; font-size: 12pt;"><strong>${mail_script:wedding-invite-link}</strong></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p><span style="color: #333333; font-size: 12pt;">Matt and Chanchira</span></p>
+<p><span style="color: #333333; font-size: 12pt;">xxx</span></p>
+<p style="text-align: center;"><span style="font-size: 12pt;"><span style="color: #575757;"><img title="" src="elephant_small.jpgx" alt="" align="baseline" border="" hspace="" vspace="" /></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Wedding Invitation Sent (NEW)</name>
+        <omit_watermark>true</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>guest1.email,guest2.email</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>matt_overseas@yahoo.com.au</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>You are invited to help us celebrate our wedding</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>matt.dodd</sys_created_by>
+        <sys_created_on>2017-07-06 20:44:17</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0871b6a5dbbb3a402737f4eabf9619e3</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Wedding Invitation Sent (NEW)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+        <sys_update_name>sysevent_email_action_0871b6a5dbbb3a402737f4eabf9619e3</sys_update_name>
+        <sys_updated_by>matt.dodd</sys_updated_by>
+        <sys_updated_on>2017-07-07 02:48:33</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>
