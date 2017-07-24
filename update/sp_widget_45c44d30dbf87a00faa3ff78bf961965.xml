@@ -88,6 +88,11 @@ h3,h4 {
   color: white;
 }
 
+.highlight {
+	background-color: yellow; 
+}
+
+
 .save-the-date {
   //position: relative;
 }
@@ -161,9 +166,21 @@ div {
 	/* e.g., data.table = $sp.getValue('table'); */
 
 	data.invite = $sp.getParameter("invite");
+
+	if (data.invite) {
+		//log the visit
+		var sess = new GlideRecord("x_snc_wedding_plan_invitation_logs");
+		sess.initialize();
+		sess.invitation = data.invite;
+		sess.session = gs.getSessionID();
+		//session.ip_address = ;
+		sess.insert();
+	}
+
+
 	var hotels = [];
 	data.button_text = "Please click to RSVP";
-		
+
 	// If an RSVP action has taken place.
 	if (input)
 	{
@@ -176,7 +193,7 @@ div {
 			UpdateStatus(input.guest2_sysid+"",input.guest2_status+"");
 		}
 		UpdateInvite(input.invite, input.comments, "Guest1: " + input.guest1_status + " & Guest2: " + input.guest2_status, input.trip_interested+"");
-		
+
 		gs.addInfoMessage("Thank you. Your response has been recorded.");
 	}		
 
@@ -193,8 +210,8 @@ div {
 
 			data.rsvp_date = gr.response_date.getDisplayValue();
 			if (data.rsvp_date.length>1)
-				{	data.rsvp = true;}
-			
+			{	data.rsvp = true;}
+
 			data.guest1 = gr.guest1.first_name.getDisplayValue();
 			data.guest1_sysid = gr.guest1.sys_id.getDisplayValue();
 			data.guest2 = gr.guest2.first_name.getDisplayValue();
@@ -208,7 +225,7 @@ div {
 				data.trip_interested = gr.trip_interested.toString();
 				data.button_text = "Click to update RSVP";
 			}
-			
+
 			data.valid = true;
 
 			//update 'viewed' flags on the invite.
@@ -227,7 +244,7 @@ div {
 				gr.rsvp_comment = input.comments;
 				gr.update();						
 			}*/
-			
+
 			//get other information about the event
 			data.hotels = getHotels();
 			data.activities = getActivities();
@@ -253,7 +270,7 @@ div {
 		grUpd2.update();
 		//gs.addInfoMessage("Debug:" + sysid + " " + status);
 	}
-	
+
 	function getHotels() {
 		var hotels = [];
 		var gr = new GlideRecord("x_snc_wedding_plan_accomodation");
@@ -265,17 +282,17 @@ div {
 			var hotel = {};
 			hotel.name = gr.name.getDisplayValue();
 			hotel.picture = gr.image.getDisplayValue();
-			hotel.short_description = gr.address.getDisplayValue();
+			hotel.short_description = gr.address.getDisplayValue() + "\n\n" + gr.tooltip.getDisplayValue();
 			//hotel.description = gr.description.getDisplayValue();
 			hotel.website = gr.website.getDisplayValue();
 			hotel.price = gr.average_price.getDisplayValue();
 			hotels.push(hotel);
 		}
-		
+
 		return hotels;
 	}
-	
-		function getActivities() {
+
+	function getActivities() {
 		var activities = [];
 		var gr = new GlideRecord("x_snc_wedding_plan_things_to_do");
 		gr.orderBy("order");
@@ -294,7 +311,7 @@ div {
 		}
 		return activities;
 	}
-	
+
 })(input, options);]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -302,7 +319,7 @@ div {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>777</sys_mod_count>
+        <sys_mod_count>784</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -310,7 +327,7 @@ div {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-07-13 05:03:57</sys_updated_on>
+        <sys_updated_on>2017-07-24 22:04:44</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 
@@ -411,7 +428,7 @@ div {
                     We are currently planning a trip down to Phuket and Phi Phi island in the following week after the wedding also (from the 23rd Oct onwards). If you are interested in joining us (and making the most of your visit to Thailand), please let us know by updating the option below.<br/><br/>
                     <select ng-model="c.data.trip_interested" name="trip_interested"><option ng-if="!data.rsvp" default value=""></option><option value="true">Sure, let's do it.</option><option value="false">Nope, sorry.</option></select><br/>
                     <br/>
-                    You can click <a class="text-bold" target="_new" href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing"><b>HERE</b></a> for more information about our current plans.
+                  <h3 class="highlight">You can click <a class="text-bold" target="_new" href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing"><b>HERE</b></a> for more information about our current plans.</h3>
                 </div>
               </div>
             </div>
@@ -456,7 +473,7 @@ div {
     <div id="accomodationtab" ng-if="data.valid" class="container table-responsive">
       <h2 class="text-center"><u>${Nearby Hotels / Accomodation}</u></h2>
       <quote>These hotels are near the area of the wedding, but also near some of the more interesting places in Chiang Mai. 
-        There are rooms available at the wedding venue too, however they are not cheap. Please feel free to reach out and ask questions if you have any.
+        There are rooms available at the wedding venue too, however they are not cheap. We do have special rates available here if you are interested in staying there. Please feel free to reach out and ask questions if you have any.
       </quote>
       <br/>
       <br/>

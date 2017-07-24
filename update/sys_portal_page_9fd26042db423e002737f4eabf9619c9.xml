@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_portal_page" unload_date="2017-07-14 06:53:24">
+<record_update node_type="sys_portal_page" unload_date="2017-07-24 22:16:32">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout/>
         <order/>
@@ -44,13 +44,13 @@
                         <height>10</height>
                         <portal_widget display_value="Created 2017-04-11 17:18:16">10b96086db423e002737f4eabf961919</portal_widget>
                         <posx>0</posx>
-                        <posy>15</posy>
+                        <posy>23</posy>
                         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
                         <sys_created_by>matt.dodd</sys_created_by>
                         <sys_created_on>2017-04-12 00:18:16</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>5cb96086db423e002737f4eabf96191b</sys_id>
-                        <sys_mod_count>14</sys_mod_count>
+                        <sys_mod_count>23</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -58,7 +58,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_5cb96086db423e002737f4eabf96191b</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:38</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:14:14</sys_updated_on>
                         <width>12</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -154,7 +154,7 @@
                         <sys_created_on>2017-04-11 23:52:25</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>2dc3ac82db423e002737f4eabf9619c3</sys_id>
-                        <sys_mod_count>19</sys_mod_count>
+                        <sys_mod_count>25</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -162,7 +162,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_2dc3ac82db423e002737f4eabf9619c3</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:52</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:09</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -258,7 +258,7 @@
                         <sys_created_on>2017-04-11 23:50:18</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>ee432882db423e002737f4eabf961997</sys_id>
-                        <sys_mod_count>30</sys_mod_count>
+                        <sys_mod_count>37</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -266,7 +266,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_ee432882db423e002737f4eabf961997</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:33</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:04</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -362,7 +362,7 @@
                         <sys_created_on>2017-04-12 00:18:50</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>60d924c6db423e002737f4eabf9619d0</sys_id>
-                        <sys_mod_count>11</sys_mod_count>
+                        <sys_mod_count>17</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -370,7 +370,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_60d924c6db423e002737f4eabf9619d0</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:47</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:09</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -466,7 +466,7 @@
                         <sys_created_on>2017-04-11 23:51:20</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>7d83a882db423e002737f4eabf9619cb</sys_id>
-                        <sys_mod_count>20</sys_mod_count>
+                        <sys_mod_count>27</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -474,7 +474,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_7d83a882db423e002737f4eabf9619cb</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:33</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:04</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -570,7 +570,7 @@
                         <sys_created_on>2017-05-03 00:07:24</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>8290b478db6ef200faa3ff78bf9619e5</sys_id>
-                        <sys_mod_count>5</sys_mod_count>
+                        <sys_mod_count>11</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -578,7 +578,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_8290b478db6ef200faa3ff78bf9619e5</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:55</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:09</sys_updated_on>
                         <width>6</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -674,7 +674,7 @@
                         <sys_created_on>2017-05-03 00:06:49</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>9170b478db6ef200faa3ff78bf9619e1</sys_id>
-                        <sys_mod_count>5</sys_mod_count>
+                        <sys_mod_count>12</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -682,7 +682,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_9170b478db6ef200faa3ff78bf9619e1</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:33</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:13:04</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -778,7 +778,7 @@
                         <sys_created_on>2017-04-11 23:50:56</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>c0736882db423e002737f4eabf96191b</sys_id>
-                        <sys_mod_count>22</sys_mod_count>
+                        <sys_mod_count>26</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -786,7 +786,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_c0736882db423e002737f4eabf96191b</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:29</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:12:58</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -882,7 +882,7 @@
                         <sys_created_on>2017-04-11 23:50:35</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>fa53e082db423e002737f4eabf9619eb</sys_id>
-                        <sys_mod_count>25</sys_mod_count>
+                        <sys_mod_count>29</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -890,7 +890,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_fa53e082db423e002737f4eabf9619eb</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:29</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:12:58</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -986,7 +986,7 @@
                         <sys_created_on>2017-05-03 00:06:11</sys_created_on>
                         <sys_customer_update>true</sys_customer_update>
                         <sys_id>84503478db6ef200faa3ff78bf9619d1</sys_id>
-                        <sys_mod_count>7</sys_mod_count>
+                        <sys_mod_count>11</sys_mod_count>
                         <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
                         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
                         <sys_policy/>
@@ -994,7 +994,7 @@
                         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
                         <sys_update_name>sys_grid_canvas_pane_84503478db6ef200faa3ff78bf9619d1</sys_update_name>
                         <sys_updated_by>matt.dodd</sys_updated_by>
-                        <sys_updated_on>2017-05-03 00:07:29</sys_updated_on>
+                        <sys_updated_on>2017-07-24 22:12:57</sys_updated_on>
                         <width>3</width>
                     </sys_grid_canvas_pane>
                 </related_items_node>
@@ -1064,6 +1064,110 @@
                         <sys_updated_by>matt.dodd</sys_updated_by>
                         <sys_updated_on>2017-05-03 00:06:11</sys_updated_on>
                         <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Overview">9fd26042db423e002737f4eabf9619c9</page>
+                <summary>Wedding Invite Visitation Logs</summary>
+                <sys_created_by>matt.dodd</sys_created_by>
+                <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                <sys_id>e5527f5fdbc4cf00faa3ff78bf9619b7</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>matt.dodd</sys_updated_by>
+                <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                <related_items_node>
+                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                        <grid_canvas display_value="PA New Tab">53d26042db423e002737f4eabf9619cb</grid_canvas>
+                        <height>8</height>
+                        <portal_widget display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_widget>
+                        <posx>0</posx>
+                        <posy>15</posy>
+                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_customer_update>true</sys_customer_update>
+                        <sys_id>25527f5fdbc4cf00faa3ff78bf9619b9</sys_id>
+                        <sys_mod_count>5</sys_mod_count>
+                        <sys_name>53d26042db423e002737f4eabf9619cb</sys_name>
+                        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+                        <sys_policy/>
+                        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+                        <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+                        <sys_update_name>sys_grid_canvas_pane_25527f5fdbc4cf00faa3ff78bf9619b9</sys_update_name>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:14:14</sys_updated_on>
+                        <width>12</width>
+                    </sys_grid_canvas_pane>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>21527f5fdbc4cf00faa3ff78bf9619b8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>2d527f5fdbc4cf00faa3ff78bf9619b8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>Wedding Invite Visitation Logs</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>69527f5fdbc4cf00faa3ff78bf9619b8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>trend</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>a5527f5fdbc4cf00faa3ff78bf9619b8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>e1527f5fdbc4cf00faa3ff78bf9619b8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2017-07-24 15:12:53">e5527f5fdbc4cf00faa3ff78bf9619b7</portal_section>
+                        <sys_created_by>matt.dodd</sys_created_by>
+                        <sys_created_on>2017-07-24 22:12:53</sys_created_on>
+                        <sys_id>e9527f5fdbc4cf00faa3ff78bf9619b7</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>matt.dodd</sys_updated_by>
+                        <sys_updated_on>2017-07-24 22:12:53</sys_updated_on>
+                        <value>8c71bb1fdbc4cf00faa3ff78bf9619fb</value>
                     </sys_portal_preferences>
                 </related_items_node>
             </sys_portal>

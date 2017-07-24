@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="invitation Logs" max_length="40" name="x_snc_wedding_plan_invitation_logs" type="collection">
+        <element label="Invitation" max_length="32" name="invitation" reference="x_snc_wedding_plan_wedding_invitation" type="reference"/>
+        <element label="IP Address" max_length="40" name="ip_address" type="string"/>
+        <element label="Session" max_length="40" name="session" type="string"/>
+        <index name="index">
+            <element name="invitation"/>
+        </index>
+    </element>
+</database>
