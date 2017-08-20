@@ -32,16 +32,16 @@
         <display_grid>false</display_grid>
         <donut_width_percent>50</donut_width_percent>
         <exp_report_attrs>true</exp_report_attrs>
-        <field>sys_created_on</field>
+        <field>invitation.guest1</field>
         <field_list/>
-        <filter table="x_snc_wedding_plan_invitation_logs">^GROUPBYsys_created_on^TRENDBYsys_created_on,week<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="sys_created_on"/>
-            <item endquery="false" field="" goto="false" newquery="false" operator="TRENDBY" or="false" value="sys_created_on,week"/>
+        <filter table="x_snc_wedding_plan_invitation_logs">^GROUPBYinvitation.guest1^TRENDBYsys_created_on,date<item endquery="false" field="" goto="false" newquery="false" operator="GROUPBY" or="false" value="invitation.guest1"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="TRENDBY" or="false" value="sys_created_on,date"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>
         <gauge_autoscale>true</gauge_autoscale>
         <group/>
-        <interval>week</interval>
+        <interval>date</interval>
         <is_published>false</is_published>
         <is_scheduled>false</is_scheduled>
         <legend_background_color display_value="White">65b303c7a9fe3dba00629aff95ee3597</legend_background_color>
@@ -58,7 +58,7 @@
         <map_source/>
         <orderby_list/>
         <other_threshold>-2</other_threshold>
-        <others>true</others>
+        <others>false</others>
         <page_hdrftr display_value="Default">0ecdb03fc3613000cef73b251eba8f5e</page_hdrftr>
         <report_drilldown/>
         <report_source/>
@@ -76,7 +76,7 @@
         <show_chart_total>false</show_chart_total>
         <show_empty>false</show_empty>
         <show_geographical_label>false</show_geographical_label>
-        <show_legend>true</show_legend>
+        <show_legend>false</show_legend>
         <show_legend_border>false</show_legend_border>
         <show_marker>true</show_marker>
         <show_zero>false</show_zero>
@@ -86,7 +86,7 @@
         <sys_created_on>2017-07-24 22:08:57</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>8c71bb1fdbc4cf00faa3ff78bf9619fb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Wedding Invite Visitation Logs</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -94,14 +94,14 @@
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sys_report_8c71bb1fdbc4cf00faa3ff78bf9619fb</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-07-24 22:08:57</sys_updated_on>
+        <sys_updated_on>2017-08-12 21:43:06</sys_updated_on>
         <table>x_snc_wedding_plan_invitation_logs</table>
         <title>Wedding Invite Visitation Logs</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
         <trend_field>sys_created_on</trend_field>
-        <type>trend</type>
+        <type>line_bar</type>
         <upper_limit/>
         <use_color_heatmap>true</use_color_heatmap>
         <use_color_palette>true</use_color_palette>

@@ -319,7 +319,7 @@ div {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>784</sys_mod_count>
+        <sys_mod_count>785</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -327,7 +327,7 @@ div {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-07-24 22:04:44</sys_updated_on>
+        <sys_updated_on>2017-07-29 21:19:41</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 
@@ -377,7 +377,7 @@ div {
       <p>&nbsp;</p>
       <h4>AT</h4>
       <p>&nbsp;</p>
-      <h2 class="text-bold"><a target="_new" href="{{options.location_url}}">{{options.location}}<br><br><img width="45%" class="img-rounded shadow" src="137Pillars_small.jpg"></a></h2>
+      <h2 class="text-bold"><a target="_blank" href="{{options.location_url}}">{{options.location}}<br><br><img width="45%" class="img-rounded shadow" src="137Pillars_small.jpg"></a></h2>
       <p>&nbsp;</p>
       <h4>{{options.details}}</h4>
       <p>&nbsp;</p>
@@ -418,7 +418,7 @@ div {
 							<h2><u>Planning your trip</u></h2>
               <!-- Planning the trip -->
               <div class="text-center">
-                A number of details have been provided below to help you plan your trip. A number of interesting activities, as well as some great nearby accomodation options, are also provided.
+                A number of details have been provided below to help you plan your trip. A number of interesting activities, as well as some great nearby accomodation options, are also provided. You can also check if you need a visa <a href="https://thailand.visahq.com/" target="_blank">HERE</a>
               </div><br>
               <div class="panel panel-default shadow">
                 <div class="panel-header">
@@ -428,7 +428,7 @@ div {
                     We are currently planning a trip down to Phuket and Phi Phi island in the following week after the wedding also (from the 23rd Oct onwards). If you are interested in joining us (and making the most of your visit to Thailand), please let us know by updating the option below.<br/><br/>
                     <select ng-model="c.data.trip_interested" name="trip_interested"><option ng-if="!data.rsvp" default value=""></option><option value="true">Sure, let's do it.</option><option value="false">Nope, sorry.</option></select><br/>
                     <br/>
-                  <h3 class="highlight">You can click <a class="text-bold" target="_new" href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing"><b>HERE</b></a> for more information about our current plans.</h3>
+                  <h3 class="highlight">You can click <a class="text-bold" target="_blank" href="https://drive.google.com/open?id=1IAN2AeyCSmfWgr-VrWzODtqL5rM&usp=sharing"><b>HERE</b></a> for more information about our current plans.</h3>
                 </div>
               </div>
             </div>
@@ -455,7 +455,7 @@ div {
     <br/>
     <!-- MAP OF AREA -->
     <div ng-if="data.valid" class="container text-center">
-      <a target="_new" href="https://www.google.com/maps/d/viewer?mid=15Ffp5fGIJqUPEPtnmOI10FCQCiM&ll=18.785917782818004%2C98.99080280199132&z=14">
+      <a target="_blank" href="https://www.google.com/maps/d/viewer?mid=15Ffp5fGIJqUPEPtnmOI10FCQCiM&ll=18.785917782818004%2C98.99080280199132&z=14">
         <h2>Interactive map of the Chiang Mai area</h2><br/>
         <img class="img-responsive center-block shadow" src="wedding_map.png"></a><br/>
       <p>You can use this map to see other things in and around Chiang Mai that you can see/do while there.<br/>
@@ -480,7 +480,7 @@ div {
       <div class="row" >      
         <div class="col-sm-6 col-md-4" ng-repeat="hotel in data.hotels | orderBy: '-count' | limitTo: data.limit">
           <div class="panel panel-default shadow">
-            <a ng-if="hotel.website" target="_new" href="{{hotel.website}}" class="panel-body block" data-toggle="tooltip" title="{{::hotel.short_description}}">
+            <a ng-if="hotel.website" target="_blank" href="{{hotel.website}}" class="panel-body block" data-toggle="tooltip" title="{{::hotel.short_description}}">
               <img ng-src="{{hotel.picture}}" ng-if="hotel.picture" class="m-r-sm m-b-sm grid-image" />
               <h4 class="m-t-none m-b-xs">{{::hotel.name}}</h4>
               <!--<div class="text-muted item-short-desc">{{::hotel.short_description}}</div>-->
@@ -505,7 +505,7 @@ div {
       <div class="row" >      
         <div class="col-sm-6 col-md-4" ng-repeat="activity in data.activities | orderBy: '-count' | limitTo: data.limit">
           <div class="panel panel-default shadow">
-            <a ng-if="activity.website" target="_new" href="{{activity.website}}" class="panel-body block" data-toggle="tooltip" title="{{::activity.short_description}}">
+            <a ng-if="activity.website" target="_blank" href="{{activity.website}}" class="panel-body block" data-toggle="tooltip" title="{{::activity.short_description}}">
               <img ng-src="{{activity.picture}}" ng-if="activity.picture" class="m-r-sm m-b-sm grid-image" />
               <h4 class="m-t-none m-b-xs">{{::activity.name}}</h4>
               <!--<h6 ng-if="activity.area" class="m-t-none m-b-xs">Area: {{::activity.area}}</h6>

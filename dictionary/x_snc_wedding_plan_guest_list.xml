@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Guest List" max_length="40" name="x_snc_wedding_plan_guest_list" type="collection">
-        <element choice="1" label="Accomodation" max_length="40" name="accomodation" reference="x_snc_wedding_plan_accomodation" type="reference">
-            <choice/>
-        </element>
+        <element label="Accomodation" max_length="200" name="accomodation" type="string"/>
         <element label="Address" max_length="255" name="address" type="string"/>
         <element label="Allergies" max_length="255" name="allergies" type="string"/>
         <element label="Arrival Date" max_length="40" name="arrival_date" type="glide_date_time"/>
@@ -14,7 +12,7 @@
                 <element label="Groom" sequence="1" value="groom"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="40" name="comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="500" name="comments" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Country" max_length="40" name="country" type="choice">
             <choice>
                 <element label="America" sequence="0" value="America"/>
