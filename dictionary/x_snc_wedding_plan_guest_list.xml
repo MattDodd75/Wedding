@@ -31,6 +31,7 @@
         <element label="Invited" max_length="40" name="invited" type="boolean"/>
         <element label="Invite Phase" max_length="15" name="invite_phase" type="integer"/>
         <element label="Last Name" max_length="50" name="last_name" type="string"/>
+        <element label="Maybe?" max_length="40" name="maybe" type="boolean"/>
         <element label="Meal Selection" max_length="40" name="meal_selection" type="string"/>
         <element label="Mobile" max_length="40" name="mobile" type="string"/>
         <element default="javascript:current.first_name + &quot; &quot; + current.last_name;" display="true" label="Name" max_length="150" name="name" read_only="true" type="string"/>

@@ -40,7 +40,7 @@ answer = true;]]></advanced_condition>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><span style="font-size: 12pt;">We&nbsp;would love&nbsp;to invite you to attend our wedding in Chiang Mai, Thailand on the 21st of October 2017, and hope you can join us. Please visit the&nbsp;website to view the full details and RSVP.</span></p>
 <p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;"><span style="font-size: 12pt;">Your unique link to your wedding&nbsp;invitation is below. Please click through&nbsp;to the information provided and provide a response as soon as you can.</span>&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 12pt;">Your unique link to your wedding&nbsp;invitation is below. Please click through&nbsp;to the information provided and provide a response as soon as you can, ideally before the 16th of September.</span>&nbsp;</p>
 <p style="text-align: center;"><span style="color: #0000ff; font-size: 12pt;"><strong>${mail_script:wedding-invite-link}</strong></span></p>
 <p style="text-align: center;">&nbsp;</p>
 <p><span style="color: #333333; font-size: 12pt;">Matt and Chanchira</span></p>
@@ -75,7 +75,7 @@ answer = true;]]></advanced_condition>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0871b6a5dbbb3a402737f4eabf9619e3</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Wedding Invitation Sent (NEW)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
@@ -84,7 +84,7 @@ answer = true;]]></advanced_condition>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sysevent_email_action_0871b6a5dbbb3a402737f4eabf9619e3</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-07-08 00:20:13</sys_updated_on>
+        <sys_updated_on>2017-08-27 03:11:36</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>
