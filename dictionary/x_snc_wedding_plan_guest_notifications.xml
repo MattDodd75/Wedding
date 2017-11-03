@@ -14,6 +14,7 @@
                 <element label="Guests who have not responded" sequence="1" value="no_response"/>
                 <element label="Guests who are interested in the trip" sequence="2" value="trip"/>
                 <element label="Matt and CC" sequence="3" value="test"/>
+                <element label="Guests who are (and maybe) attending" sequence="4" value="attendeesandmaybes"/>
             </choice>
         </element>
     </element>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Seating" section_id="93c7984edb3543802737f4eabf9619f8" sys_domain="global" table="x_snc_wedding_plan_guest_list" version="3" view="seating">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>table</element>
+            <position>0</position>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-10-15 09:03:26</sys_created_on>
+            <sys_id>ba9910cedb3543802737f4eabf96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Seating" display_value="Seating" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="f71dd162dba9c7402737f4eabf9619c4">93c7984edb3543802737f4eabf9619f8</sys_ui_section>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-10-15 09:03:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>role</element>
+            <position>1</position>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-10-15 09:03:26</sys_created_on>
+            <sys_id>3e9910cedb3543802737f4eabf96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Seating" display_value="Seating" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="f71dd162dba9c7402737f4eabf9619c4">93c7984edb3543802737f4eabf9619f8</sys_ui_section>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-10-15 09:03:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-10-15 09:03:26</sys_created_on>
+            <sys_id>be9910cedb3543802737f4eabf96197e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Seating" display_value="Seating" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="f71dd162dba9c7402737f4eabf9619c4">93c7984edb3543802737f4eabf9619f8</sys_ui_section>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-10-15 09:03:26</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>seat_number</element>
+            <position>3</position>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-10-15 09:03:26</sys_created_on>
+            <sys_id>329910cedb3543802737f4eabf96197f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Seating" display_value="Seating" name="x_snc_wedding_plan_guest_list" sys_domain="global" view="f71dd162dba9c7402737f4eabf9619c4">93c7984edb3543802737f4eabf9619f8</sys_ui_section>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-10-15 09:03:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Seating</caption>
+            <header>false</header>
+            <name>x_snc_wedding_plan_guest_list</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>matt.dodd</sys_created_by>
+            <sys_created_on>2017-10-15 08:55:33</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>93c7984edb3543802737f4eabf9619f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Seating</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
+            <sys_update_name>sys_ui_section_93c7984edb3543802737f4eabf9619f8</sys_update_name>
+            <sys_updated_by>matt.dodd</sys_updated_by>
+            <sys_updated_on>2017-10-15 08:55:33</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Seating" name="seating">f71dd162dba9c7402737f4eabf9619c4</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

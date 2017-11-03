@@ -3,23 +3,23 @@
     <sys_ui_view action="INSERT_OR_UPDATE">
         <group/>
         <hidden>false</hidden>
-        <name>rpt-temp6c827d4bdb197200faa3ff78bf96198bmatt.dodd</name>
+        <name>allergies</name>
         <roles/>
         <sys_class_name>sys_ui_view</sys_class_name>
         <sys_created_by>matt.dodd</sys_created_by>
-        <sys_created_on>2017-09-05 03:31:14</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>2afd01c1dbcd4300faa3ff78bf961927</sys_id>
+        <sys_created_on>2017-10-04 16:08:56</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2481112adb69c7402737f4eabf961991</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
+        <sys_name>Allergies</sys_name>
+        <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_ui_view_2481112adb69c7402737f4eabf961991</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-09-05 03:31:14</sys_updated_on>
-        <title>Rpt-temp6c827d4bdb197200faa3ff78bf96198bmatt.dodd</title>
+        <sys_updated_on>2017-10-04 16:08:56</sys_updated_on>
+        <title>Allergies</title>
         <user/>
     </sys_ui_view>
 </record_update>

@@ -319,7 +319,7 @@ div {
         <sys_created_on>2017-02-05 01:45:41</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>45c44d30dbf87a00faa3ff78bf961965</sys_id>
-        <sys_mod_count>786</sys_mod_count>
+        <sys_mod_count>792</sys_mod_count>
         <sys_name>Wedding Invite</sys_name>
         <sys_package display_value="Wedding Planner" source="x_snc_wedding_plan">d2bae02edbc0fe00faa3ff78bf9619fb</sys_package>
         <sys_policy/>
@@ -327,7 +327,7 @@ div {
         <sys_scope display_value="Wedding Planner">d2bae02edbc0fe00faa3ff78bf9619fb</sys_scope>
         <sys_update_name>sp_widget_45c44d30dbf87a00faa3ff78bf961965</sys_update_name>
         <sys_updated_by>matt.dodd</sys_updated_by>
-        <sys_updated_on>2017-08-28 05:35:42</sys_updated_on>
+        <sys_updated_on>2017-10-16 18:04:42</sys_updated_on>
         <template><![CDATA[<div class="wedding-background wedding-text">
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 
@@ -347,7 +347,7 @@ div {
         <ul class="nav navbar-nav navbar-right">
           <li><a href="javascript:void(0);" ng-click="c.scrollTo('rsvptab')">RSVP</a></li>
           <li><a href="javascript:void(0);" ng-click="c.scrollTo('detailstab')">Details</a></li>
-          <li><a href="javascript:void(0);" ng-click="c.scrollTo('registrytab')">Registry</a></li>          
+          <li><a href="javascript:void(0);" ng-click="c.scrollTo('registrytab')">Gifts/Registry</a></li>          
           <li><a href="javascript:void(0);" ng-click="c.scrollTo('accomodationtab')">Accomodation</a></li>
           <li><a href="javascript:void(0);" ng-click="c.scrollTo('activitytab')">Things to do</a></li>
           <li><a href="javascript:void(0);" ng-click="c.scrollTo('childcaretab')">ChildCare</a></li>
@@ -464,9 +464,9 @@ div {
     <!-- Gift / Registry section -->
     <div id="registrytab" ng-if="data.valid" class="container text-center">
       <h2><u>Gifts/Registry</u></h2>
-      <p>We realize that many of you are travelling a long way for this occassion and for us, your presence is truly considered as our present.
-      If anyone does wish to provide us with a gift to help celebrate, then we would prefer a donation to our online registry. Travelling with a physical gifts will be cumbersome for yourselves and ourselves too. Many of you may not be aware, but we are in the process of migrating to Australia (Perth) so we will be starting from scratch again, and hence any contributions will be going towards this big move.</p>
-      <h3><a href="http://mattandchanchira.thehintregistry.com.au" target="_blank">mattandchanchira.thehintregistry.com.au</a></h3>
+      <p>We realize that many of you are traveling a long way for this occassion and for us, your presence is truly considered as our present.
+      If anyone does wish to provide us with a gift to help celebrate, then we would prefer a donation to our online registry below (or <a target="_blank" href="https://www.paypal.me/MattDodd75">Paypal</a>), or into the 'Wishing Well' that will be at the wedding event. Traveling with physical gifts will be cumbersome for yourselves and ourselves too. Many of you may not be aware, but we are in the process of migrating to Australia (Perth) so we will be starting from scratch again, and hence any contributions will be going towards this big move.</p>
+      <h3><a href="http://mattandchanchira.thehintregistry.com.au" target="_blank">http://mattandchanchira.thehintregistry.com.au</a></h3>
 		</div>
     <br/>
     <!-- Accomodation Section -->

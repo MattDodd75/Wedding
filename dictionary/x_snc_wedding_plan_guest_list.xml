@@ -40,6 +40,34 @@
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Partner" max_length="40" name="partner" reference="x_snc_wedding_plan_guest_list" type="reference"/>
         <element label="Phone" max_length="40" name="phone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Role" max_length="40" name="role" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="-- None --" label="zzSeat" max_length="40" name="seat" type="string">
+            <choice>
+                <element label="1" sequence="0" value="1"/>
+                <element label="2" sequence="1" value="2"/>
+                <element label="3" sequence="2" value="3"/>
+                <element label="4" sequence="3" value="4"/>
+                <element label="5" sequence="4" value="5"/>
+                <element label="6" sequence="5" value="6"/>
+                <element label="7" sequence="6" value="7"/>
+                <element label="8" sequence="7" value="8"/>
+                <element label="9" sequence="8" value="9"/>
+                <element label="10" sequence="9" value="10"/>
+                <element label="11" sequence="10" value="11"/>
+                <element label="12" sequence="11" value="12"/>
+                <element label="13" sequence="12" value="13"/>
+            </choice>
+        </element>
+        <element default="current.seat" label="Seat Number" max_length="40" name="seat_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="Table 1" label="Table" max_length="40" name="table" type="string">
+            <choice>
+                <element label="Table 1" sequence="0" value="Table 1"/>
+                <element label="Table 2" sequence="1" value="Table 2"/>
+                <element label="Table 3" sequence="2" value="Table 3"/>
+                <element label="Table 4" sequence="3" value="Table 4"/>
+                <element label="Table 5" sequence="4" value="Table 5"/>
+            </choice>
+        </element>
         <element label="Invitation" max_length="32" name="u_invitation" reference="x_snc_wedding_plan_wedding_invitation" type="reference"/>
         <element label="Vegetarian" max_length="40" name="vegetarian" type="boolean"/>
         <element label="Viewed Invite?" max_length="40" name="viewed_invite" type="boolean"/>
