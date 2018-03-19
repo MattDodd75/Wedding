@@ -4,6 +4,7 @@
         <access>package_private</access>
         <active>false</active>
         <api_name>x_snc_wedding_plan.WeddingNotification</api_name>
+        <caller_access/>
         <client_callable>false</client_callable>
         <description>//not working currently</description>
         <name>WeddingNotification</name>
